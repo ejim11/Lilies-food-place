@@ -1,0 +1,107 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.get-notified {
+  margin-top: 14rem;
+
+  @include respond(bigTablet) {
+    text-align: center;
+  }
+
+  & h2 {
+    font-size: $font-sub-heading;
+    color: $color-secondary;
+    font-weight: 700;
+  }
+
+  &-box {
+    display: flex;
+
+    @include respond(bigTablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & p {
+      font-size: $font-text;
+      font-weight: 400;
+      width: 45%;
+      color: $color-text-3;
+      padding: 3.2rem 0;
+
+      @include respond(bigTablet) {
+        width: 90%;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.form-container {
+  width: 55%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  margin-left: 2rem;
+
+  @include respond(bigTablet) {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  & form {
+    display: flex;
+    width: 80%;
+    @include respond(bigTablet) {
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    & input {
+      padding: 1.5rem;
+      font-size: $font-text;
+      background: #f7f7f7;
+      border: 1px solid #b3b3b3;
+      border-radius: 5px;
+      margin-right: 0.8rem;
+      font-family: $font-tertiary;
+      outline: none;
+      color: $color-primary;
+      caret-color: $color-primary;
+      flex: 1;
+
+      @include respond(phone) {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      &::placeholder {
+        color: #b2b2b2;
+      }
+    }
+
+    & button {
+      padding: 1.5rem 4rem;
+      font-size: $font-text;
+      color: $color-primary;
+      background: $color-secondary;
+      font-weight: 500;
+      border: 1px solid $color-secondary;
+      font-family: $font-tertiary;
+      border-radius: 5px;
+
+      @include respond(phone) {
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+}

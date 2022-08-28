@@ -1,0 +1,96 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.first-section {
+  display: flex;
+  margin-top: 4rem;
+  align-items: center;
+
+  @include respond(midTablet) {
+    flex-direction: column;
+  }
+
+  &-box-1 {
+    width: 60%;
+
+    @include respond(miniLaptop) {
+      width: 65%;
+    }
+
+    @include respond(midTablet) {
+      width: 100%;
+      text-align: center;
+    }
+
+    & h1 {
+      font-size: $font-heading;
+      font-weight: 500;
+      color: $color-white;
+
+      @include respond(miniLaptop) {
+        font-size: 5rem;
+      }
+
+      @include respond(bigTablet) {
+        font-size: 4.5rem;
+      }
+
+      @include respond(phone) {
+        font-size: 3.5rem;
+      }
+
+      & span {
+        color: $color-secondary;
+      }
+    }
+
+    & p {
+      font-size: $font-text;
+      color: $color-text-1;
+      padding-right: 10rem;
+      margin: 2rem 0;
+
+      @include respond(bigTablet) {
+        padding-right: 5rem;
+      }
+
+      @include respond(midTablet) {
+        padding-right: 0rem;
+      }
+    }
+  }
+
+  &-box-2 {
+    width: 40%;
+
+    @include respond(miniLaptop) {
+      width: 35%;
+    }
+
+    @include respond(midTablet) {
+      width: 50%;
+      margin-top: 3rem;
+    }
+
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+    }
+
+    & img {
+      margin-left: 3rem;
+
+      @include respond(miniLaptop) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.g-play {
+  & a {
+    margin-right: 1.2rem;
+  }
+}

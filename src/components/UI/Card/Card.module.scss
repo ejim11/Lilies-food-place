@@ -1,0 +1,19 @@
+@import "../../scss/mixin";
+
+.card {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond(bigLaptop) {
+    width: 75%;
+  }
+
+  @include respond(medLaptop) {
+    width: 85%;
+  }
+
+  @include respond(bigTablet) {
+    width: 90%;
+  }
+}

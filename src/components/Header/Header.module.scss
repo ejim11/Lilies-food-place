@@ -1,0 +1,74 @@
+@import "../scss/base";
+@import "../scss/mixin";
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 5rem 0rem;
+  width: 85%;
+  margin: 0 auto;
+
+  & .logo {
+    display: flex;
+    align-items: center;
+
+    @include respond(phone) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    & p {
+      font-size: $font-sub-heading;
+      color: $color-white;
+      font-weight: 700;
+      margin-left: 3rem;
+
+      @include respond(phone) {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  & a {
+    font-size: 2rem;
+    text-decoration: none;
+    margin-left: auto;
+  }
+
+  & .login {
+    margin: 0 4.5rem;
+    font-size: 2rem;
+    background-color: transparent;
+    color: $color-white;
+    font-weight: 500;
+    border: none;
+
+    @include respond(midTablet) {
+      margin: 0 2.5rem;
+    }
+
+    @include respond(phone) {
+      border: 1px solid $color-white;
+      padding: 1rem;
+      margin: 0 0 0 1.5rem;
+    }
+  }
+
+  & .sign-up {
+    font-size: 2rem;
+    background-color: $color-secondary;
+    color: $color-primary;
+    padding: 1rem 3.5rem;
+    border-radius: 0.7rem;
+    border: 1px solid $color-secondary;
+    font-weight: 600;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+
+.active {
+  color: $color-secondary;
+}
