@@ -1,0 +1,46 @@
+@import "../../scss/mixin";
+
+.container {
+  display: flex;
+  width: 100%;
+  max-height: 100vh;
+
+  & .img-box,
+  .form-box {
+    height: 100vh;
+  }
+
+  & .img-box {
+    width: 55%;
+
+    @include respond(miniLaptop) {
+      width: 45%;
+    }
+
+    @include respond(bigTablet) {
+      width: 40%;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  & .form-box {
+    width: 45%;
+    display: flex;
+    align-items: center;
+
+    @include respond(miniLaptop) {
+      width: 55%;
+    }
+
+    @include respond(bigTablet) {
+      width: 60%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}

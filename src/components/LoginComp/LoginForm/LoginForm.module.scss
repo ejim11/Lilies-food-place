@@ -1,0 +1,98 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.form-container {
+  width: 100%;
+  padding: 0 5rem;
+
+  @include respond(smallPhone) {
+    padding: 0 2rem;
+  }
+
+  & h3 {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 600;
+    margin: 0 0 6.1rem;
+    color: $color-primary;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+
+    & input {
+      padding: 1.9rem 2.5rem;
+      background: rgba(255, 255, 255, 0.83);
+      border-radius: 5px;
+      outline: none;
+      width: 100%;
+      caret-color: $color-primary;
+      color: $color-primary;
+
+      &::placeholder {
+        color: #00302e87;
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+    }
+
+    & .valid .input {
+      border: 1px solid rgba(251, 221, 187, 0.51);
+
+      &:focus {
+        border-color: $color-primary;
+      }
+    }
+
+    .invalid input {
+      border: 1px solid red;
+    }
+
+    & .password-div {
+      width: 100%;
+      margin: 4.8rem 0;
+      position: relative;
+
+      & .show-password {
+        position: absolute;
+        top: 1.9rem;
+        right: 2.5rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $color-primary;
+        cursor: pointer;
+      }
+    }
+
+    & .form-btn {
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      border-radius: 5px;
+      padding: 1.95rem 0;
+      color: $color-secondary;
+      font-size: $font-text;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin-top: 3.4rem;
+  justify-content: space-between;
+
+  & a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(0, 48, 46, 0.91);
+  }
+}
+
+.error-msg {
+  font-size: 1.2rem;
+  margin: 1rem 0 0;
+  color: $color-error;
+}

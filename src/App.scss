@@ -57,3 +57,9 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+// input[type="password"]:not(::placeholder) {
+//   -webkit-text-security: disc;
+//   -webkit-text-stroke-width: 0.3rem;
+//   letter-spacing: 0.6rem;
+// }

@@ -5,6 +5,10 @@ $color-text-1: #ffffffde;
 $color-text-2: #ffffffbd;
 $color-text-3: #fffffff2;
 $color-white: #fff;
+$color-error: rgba(
+  $color: red,
+  $alpha: 0.5,
+);
 
 $font-primary: "Poppins", sans-serif;
 $font-secondary: "Inter", sans-serif;
