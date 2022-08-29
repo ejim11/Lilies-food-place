@@ -2,6 +2,7 @@ import Button from "../../UI/Button/Button";
 import classes from "./LoginForm.module.scss";
 import { useState } from "react";
 import useInput from "../../hooks/user-input";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [passwordIsVisible, setPasswordIsVisible] = useState(false);
@@ -91,8 +92,8 @@ const LoginForm = () => {
         </Button>
       </form>
       <div className={classes.links}>
-        <a href="#create">Create an account</a>
-        <a href="#forgot">Forgot Password</a>
+        <Link to="/sign-up">Create an account</Link>
+        <Link to="/forgot-password">Forgot Password</Link>
       </div>
     </div>
   );

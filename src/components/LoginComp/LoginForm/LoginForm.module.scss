@@ -72,6 +72,15 @@
       padding: 1.95rem 0;
       color: $color-secondary;
       font-size: $font-text;
+
+      &:disabled,
+      &:disabled:hover,
+      &:disabled:active {
+        background-color: #ccc;
+        color: $color-white;
+        border-color: #ccc;
+        cursor: not-allowed;
+      }
     }
   }
 }
