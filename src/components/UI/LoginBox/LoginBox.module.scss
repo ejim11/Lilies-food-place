@@ -8,6 +8,10 @@
 
   & .img-box {
     height: 100vh;
+
+    @include orient(phone) {
+      height: 110vh;
+    }
   }
 
   & .img-box {

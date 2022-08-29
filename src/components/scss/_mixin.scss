@@ -60,7 +60,7 @@
 
 @mixin orient($breakpoint) {
   @if $breakpoint == phone {
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (max-height: 24.375em) {
       //300
       @content;
     }
