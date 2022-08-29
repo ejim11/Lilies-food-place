@@ -15,6 +15,10 @@
     font-weight: 600;
     margin: 0 0 6.1rem;
     color: $color-primary;
+
+    @include orient(phone) {
+      margin: 0 0 2.1rem;
+    }
   }
 
   & form {
@@ -54,6 +58,10 @@
       margin: 4.8rem 0;
       position: relative;
 
+      @include orient(phone) {
+        margin: 2.8rem 0;
+      }
+
       & .show-password {
         position: absolute;
         top: 1.9rem;
@@ -90,6 +98,10 @@
   align-items: center;
   margin-top: 3.4rem;
   justify-content: space-between;
+
+  @include orient(phone) {
+    margin-top: 1.8rem;
+  }
 
   & a {
     display: block;

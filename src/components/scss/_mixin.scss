@@ -57,3 +57,12 @@
     }
   }
 }
+
+@mixin orient($breakpoint) {
+  @if $breakpoint == phone {
+    @media (orientation: landscape) {
+      //300
+      @content;
+    }
+  }
+}
