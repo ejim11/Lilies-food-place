@@ -65,7 +65,7 @@ const SignUpForm = () => {
 
   return (
     <div className={classes["form-container"]}>
-      <h3>Welcome to Lilies</h3>
+      <h3>Welcome to Lilies!</h3>
       <form onSubmit={loginSubmitHandler}>
         <div className={nameInputClasses}>
           <input

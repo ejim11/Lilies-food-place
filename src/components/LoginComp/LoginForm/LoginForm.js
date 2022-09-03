@@ -51,7 +51,7 @@ const LoginForm = () => {
 
   return (
     <div className={classes["form-container"]}>
-      <h3>Welcome Back</h3>
+      <h3>Welcome Back!</h3>
       <form onSubmit={loginSubmitHandler}>
         <div className={emailInputClasses}>
           <input

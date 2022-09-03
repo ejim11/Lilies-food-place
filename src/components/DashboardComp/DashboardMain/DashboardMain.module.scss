@@ -1,0 +1,32 @@
+@import "../../scss/base";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 0rem 6rem;
+
+
+    & .intro-box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 5rem 0 5rem;
+
+        & .greeting {
+            font-size: 2.3rem;
+            font-weight: 600;
+            color: $color-primary
+        }
+
+        & .greeting-question {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.69);
+        }
+    }
+
+    & .profile-img {
+        margin-left: auto;
+    }
+}

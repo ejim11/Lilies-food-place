@@ -1,0 +1,101 @@
+@import "../../scss/base";
+
+.child-box {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 6rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+
+
+
+    & .text {
+
+        & h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: $color-primary;
+            margin: 1rem 0 1.5rem;
+        }
+
+        & p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.69);
+            line-height: 2.7rem;
+        }
+    }
+
+    & .price-box {
+        display: flex;
+        width: 100%;
+        margin: 4.1rem 0;
+        display: flex;
+        justify-content: space-between;
+
+
+        & p {
+            color: $color-primary;
+            font-weight: 600;
+            font-size: 1.7rem;
+
+        }
+
+
+
+    }
+
+    & .amount-box {
+        display: flex;
+        //align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 1rem 0 0;
+
+        & .add-to-cart-btn {
+            padding: 1rem 3.5rem;
+            color: $color-white;
+            background-color: $color-primary;
+            border: 1px solid $color-primary;
+            font-size: 1.4rem;
+
+            &:hover {
+                color: $color-primary;
+                background-color: transparent;
+            }
+        }
+
+        & div {
+            display: flex;
+
+            & .operation-btn {
+                background-color: #F3C294;
+                color: $color-primary;
+                width: 3.5rem;
+                border: 1px solid #F3C294;
+                cursor: pointer;
+                font-size: 2rem;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: transparent;
+                    border-color: $color-primary;
+                }
+            }
+
+            & P {
+                display: flex;
+                font-size: 2rem;
+                font-weight: 500;
+                width: 5rem;
+                align-items: center;
+                justify-content: center;
+                color: $color-primary;
+                padding: 0 1rem;
+            }
+        }
+    }
+}

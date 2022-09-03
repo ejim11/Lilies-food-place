@@ -1,0 +1,91 @@
+@import "../../scss/base";
+
+.contain {
+    border-radius: 0 2rem 2rem 0;
+    width: 20%;
+    background-color: #FBFBFB;
+
+
+
+    & .links {
+        padding: 0rem 4rem;
+        width: 100%;
+
+
+        & h2 {
+            display: flex;
+            align-items: center;
+            margin: 5rem 0 4rem;
+
+
+            & .logo-img {
+                width: 4rem;
+                height: 4rem;
+            }
+
+            & p {
+                font-size: 3.3rem;
+                color: $color-primary;
+                letter-spacing: 0.05rem;
+                margin-left: 1.5rem;
+
+            }
+        }
+
+        & .links-box {
+            & ul {
+                list-style-type: none;
+
+                & li {
+                    margin: 1rem 0;
+
+                    & a {
+                        text-decoration: none;
+                        display: flex;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        padding: 1rem;
+                        align-items: center;
+
+                        & .icon {
+                            margin-right: 1.5rem;
+                            height: 2.3rem;
+                            width: 2.3rem;
+                            color: currentColor;
+                        }
+
+                        & span {
+                            margin-left: auto;
+                            padding: 0 .5rem;
+                            color: $color-black;
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                            width: 2.5rem;
+                            text-align: center;
+                        }
+
+                        & .order {
+                            background-color: #06E775;
+
+                        }
+
+                        & .cart {
+                            background-color: #F3C294
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.link-active {
+    color: $color-black;
+    background: #EFEFEF;
+    border-radius: 1.2rem;
+
+}
+
+.link-inactive {
+    color: #707070;
+}
