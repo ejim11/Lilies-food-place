@@ -1,9 +1,31 @@
 @import "../../scss/base";
+@import "../../scss/mixin";
 
 .contain {
     border-radius: 0 2rem 2rem 0;
     width: 20%;
     background-color: #FBFBFB;
+
+    @include respond(miniLaptop) {
+        width: 28%;
+    }
+
+
+    @include respond(miniLaptop) {
+        width: 35%;
+    }
+
+    @include respond(tablet) {
+        width: 38%;
+    }
+
+    @include respond(midTablet) {
+        border-radius: 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        background-color: $color-primary;
+
+    }
 
 
 
@@ -11,30 +33,91 @@
         padding: 0rem 4rem;
         width: 100%;
 
+        @include respond(tablet) {
+            padding: 0rem 2.5rem;
+        }
 
-        & h2 {
+        & .logo-box {
             display: flex;
             align-items: center;
-            margin: 5rem 0 4rem;
 
 
-            & .logo-img {
-                width: 4rem;
-                height: 4rem;
+            & h2 {
+                display: flex;
+                align-items: center;
+                margin: 5rem 0 8rem;
+                cursor: pointer;
+
+                @include respond(midTablet) {
+                    margin: 0;
+                }
+
+                & .logo-img {
+                    width: 4rem;
+                    height: 4rem;
+                }
+
+                & p {
+                    font-size: 3.3rem;
+                    color: $color-primary;
+                    letter-spacing: 0.05rem;
+                    margin-left: 1.5rem;
+
+                    @include respond(midTablet) {
+                        color: #FBFBFB;
+                    }
+                }
             }
 
-            & p {
-                font-size: 3.3rem;
-                color: $color-primary;
-                letter-spacing: 0.05rem;
-                margin-left: 1.5rem;
+            & .menu-logo {
+                display: none;
 
+                @include respond(midTablet) {
+                    display: block;
+                    color: $color-white;
+                    margin-left: auto;
+                    width: 3.2rem;
+                    height: 3.2rem;
+                }
             }
         }
 
+
+
+
         & .links-box {
+            @include respond(midTablet) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                background-color: rgba($color-primary, .4);
+                transition: all .3s ease-in;
+            }
+
+            & .times-icon {
+                display: none;
+
+                @include respond(midTablet) {
+                    display: block;
+                    color: $color-white;
+                    width: 3.3rem;
+                    height: 3.3rem;
+                    margin: 2.5rem 2rem 0 auto;
+                }
+            }
+
             & ul {
                 list-style-type: none;
+
+                @include respond(midTablet) {
+                    width: 70%;
+                    padding: 7rem 1.5rem 0;
+                    height: 100vh;
+                    background-color: #FBFBFB;
+                }
 
                 & li {
                     margin: 1rem 0;
@@ -76,6 +159,22 @@
                 }
             }
         }
+
+        & .visible {
+
+            //opacity: 1;
+            @include respond(midTablet) {
+                transform: translate(0);
+            }
+        }
+
+        & .invisible {
+
+            //opacity: 0;
+            @include respond(midTablet) {
+                transform: translateX(-100%);
+            }
+        }
     }
 }
 
@@ -88,4 +187,9 @@
 
 .link-inactive {
     color: #707070;
+
+    &:hover {
+        background: #EFEFEF;
+        border-radius: 1.2rem;
+    }
 }

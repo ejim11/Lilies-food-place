@@ -28,7 +28,7 @@ const Cart = () => {
             onClick={() => {
               dispatchFn(
                 cartActions.removeMealItem({
-                  id: item.id,
+                  title: item.title,
                   quantity: item.quantity,
                 })
               );

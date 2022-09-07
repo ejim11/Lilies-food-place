@@ -7,7 +7,7 @@ import soupImg from "../../../assets/meal-soup.jpg";
 
 const mealListData = [
   {
-    id: "1",
+    // id: `bg-${Math.trunc(Math.random() * 10000)}`,
     src: burgerImg,
     title: "Burger",
     text: "The in-house pasta and chicken by chef Moose",
@@ -17,7 +17,7 @@ const mealListData = [
     piecesAvailable: 28,
   },
   {
-    id: "2",
+    // id: `pt-${Math.trunc(Math.random() * 10000)}`,
     src: pastaImg,
     title: "Pasta",
     text: "The in-house pasta and chicken by chef Moose",
@@ -27,7 +27,7 @@ const mealListData = [
     piecesAvailable: 9,
   },
   {
-    id: "3",
+    // id: `mb-${Math.trunc(Math.random() * 10000)}`,
     src: meatballsImg,
     title: "Meat Balls",
     text: "The in-house pasta and chicken by chef Moose",
@@ -37,7 +37,7 @@ const mealListData = [
     piecesAvailable: 37,
   },
   {
-    id: "4",
+    // id: `sl-${Math.trunc(Math.random() * 10000)}`,
     src: saladImg,
     title: "Salad",
     text: "The in-house pasta and chicken by chef Moose",
@@ -47,7 +47,7 @@ const mealListData = [
     piecesAvailable: 14,
   },
   {
-    id: "5",
+    // id: `bf-${Math.trunc(Math.random() * 10000)}`,
     src: breadFruitImg,
     title: "Blueberry Toasts and smoothie",
     text: "The in-house pasta and chicken by chef Moose",
@@ -57,7 +57,7 @@ const mealListData = [
     piecesAvailable: 34,
   },
   {
-    id: "6",
+    // id: `sp-${Math.trunc(Math.random() * 10000)}`,
     src: soupImg,
     title: "Soup",
     text: "The in-house pasta and chicken by chef Moose",

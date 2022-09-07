@@ -1,4 +1,4 @@
-import classes from "./Dashboard.module.scss";
+import classes from "./DashboardComp.module.scss";
 import DashboardLinks from "./DashboardLinks/DashboardLinks";
 import { Outlet } from "react-router-dom";
 

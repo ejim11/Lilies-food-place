@@ -1,5 +1,5 @@
 import logoImg from "../../../assets/logo.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { ImGift } from "react-icons/im";
@@ -7,24 +7,49 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import classes from "./DashboardLinks.module.scss";
 import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux/es/exports";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { HiX } from "react-icons/hi";
+import { useState } from "react";
 
 const DashboardLinks = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const mealCartState = useSelector((state) => state.cart.cart);
   const mealOrderState = useSelector((state) => state.cart.order);
-
+  const [menuIsVisible, setMenuIsVisible] = useState(false);
   const locationActive = location.pathname.split("/").slice(-1)[0];
+
+  const toggleMenuHandler = () => {
+    setMenuIsVisible((prevState) => !prevState);
+  };
+
+  const navigateToHome = () => {
+    navigate("/home");
+  };
 
   return (
     <div className={classes.contain}>
       <div className={classes.links}>
-        <h2>
-          <div className={classes["logo-img"]}>
-            <img src={logoImg} alt={"logo-text"} />
-          </div>
-          <p>Lilies</p>
-        </h2>
-        <div className={classes["links-box"]}>
+        <div className={classes["logo-box"]}>
+          <h2 onClick={navigateToHome}>
+            <div className={classes["logo-img"]}>
+              <img src={logoImg} alt={"logo-text"} />
+            </div>
+            <p>Lilies</p>
+          </h2>
+          {!menuIsVisible && (
+            <HiOutlineMenuAlt3
+              onClick={toggleMenuHandler}
+              className={classes["menu-logo"]}
+            />
+          )}
+        </div>
+        <div
+          onClick={toggleMenuHandler}
+          className={`${classes["links-box"]} ${
+            menuIsVisible ? classes.visible : classes.invisible
+          }`}
+        >
           <ul>
             <li>
               <NavLink
@@ -81,6 +106,7 @@ const DashboardLinks = () => {
               </NavLink>
             </li>
           </ul>
+          <HiX className={classes["times-icon"]} />
         </div>
       </div>
     </div>

@@ -1,10 +1,24 @@
 @import "../../scss/base";
+@import "../../scss/mixin";
+
 
 .checkout {
     width: 35%;
     display: flex;
     flex-direction: column;
     padding: 0 2rem 5rem;
+
+    @include respond(miniLaptop) {
+        width: 50%;
+    }
+
+    @include respond(bigTablet) {
+        width: 60%;
+    }
+
+    @include respond(midTablet) {
+        width: 75%;
+    }
 
     &-heading {
         margin: 6rem 0 4rem;
@@ -70,6 +84,10 @@
             padding: 1.7rem 0;
             font-size: 1.3rem;
             font-weight: 600;
+
+            @include respond(bigTablet) {
+                width: 100%;
+            }
 
             &:disabled,
             &:disabled:hover,

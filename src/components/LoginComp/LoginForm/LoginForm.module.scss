@@ -116,6 +116,20 @@
   }
 }
 
+.home-link {
+  width: 100%;
+  margin: 3rem 0 0;
+
+  & a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(0, 48, 46, 0.91);
+  }
+}
+
 .error-msg {
   font-size: 1.2rem;
   margin: 1rem 0 0;

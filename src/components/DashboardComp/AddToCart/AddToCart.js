@@ -34,7 +34,7 @@ const AddToCart = () => {
     setMealAmount(1);
     dispatchFn(
       cartActions.addItemToCart({
-        id: cartItem.id,
+        title: cartItem.title,
         amount: mealAmount,
       })
     );

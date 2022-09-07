@@ -1,4 +1,6 @@
 @import "../../scss/base";
+@import "../../scss/mixin";
+
 
 .order {
     width: 40%;
@@ -7,6 +9,19 @@
     padding: 6rem 3rem;
     justify-content: center;
 
+    @include respond(bigTablet) {
+        width: 60%;
+    }
+
+    @include respond(midTablet) {
+        width: 75%;
+    }
+
+
+
+    @include respond(phone) {
+        padding: 6rem 1.5rem;
+    }
 
     & .heading {
         color: $color-primary;

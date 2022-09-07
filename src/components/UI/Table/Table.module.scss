@@ -30,6 +30,7 @@
         color: $color-primary;
         border-collapse: separate;
         border-spacing: 1rem 1rem;
+        border-color: transparent;
 
         & th {
             text-align: left;
@@ -41,10 +42,5 @@
                 padding: 1rem;
             }
         }
-
-
-
-
-
     }
 }

@@ -7,6 +7,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 const Header = () => {
   const navigate = useNavigate();
 
+  const userData = JSON.parse(localStorage.getItem("userDetails"));
+
   return (
     <header>
       <Card className={classes.header}>
@@ -22,22 +24,35 @@ const Header = () => {
         >
           Home
         </NavLink>
-        <Button
-          className={classes.login}
-          onClick={() => {
-            navigate("/login");
-          }}
-        >
-          Login
-        </Button>
-        <Button
-          className={classes["sign-up"]}
-          onClick={() => {
-            navigate("/sign-up");
-          }}
-        >
-          Sign Up
-        </Button>
+        {userData ? (
+          <Button
+            className={classes.dashboard}
+            onClick={() => {
+              navigate("/dashboard");
+            }}
+          >
+            Dashboard
+          </Button>
+        ) : (
+          <Button
+            className={classes.login}
+            onClick={() => {
+              navigate("/login");
+            }}
+          >
+            Login
+          </Button>
+        )}
+        {!userData && (
+          <Button
+            className={classes["sign-up"]}
+            onClick={() => {
+              navigate("/sign-up");
+            }}
+          >
+            Sign Up
+          </Button>
+        )}
       </Card>
     </header>
   );

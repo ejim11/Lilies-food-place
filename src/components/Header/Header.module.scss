@@ -43,6 +43,11 @@
     font-weight: 500;
     border: none;
 
+    &:hover {
+      color: $color-secondary;
+    }
+
+
     @include respond(midTablet) {
       margin: 0 2.5rem;
     }
@@ -54,6 +59,29 @@
     }
   }
 
+  & .dashboard {
+    margin: 0 2.5rem;
+    font-size: 2rem;
+    background-color: transparent;
+    color: $color-white;
+    font-weight: 500;
+    border: none;
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    @include respond(midTablet) {
+      margin: 0 2.5rem;
+    }
+
+    @include respond(phone) {
+      border: 1px solid $color-white;
+      padding: .5rem;
+      margin: 0 0 0 1rem;
+    }
+  }
+
   & .sign-up {
     font-size: 2rem;
     background-color: $color-secondary;
@@ -62,6 +90,12 @@
     border-radius: 0.7rem;
     border: 1px solid $color-secondary;
     font-weight: 600;
+
+    &:hover {
+      color: $color-secondary;
+      background-color: transparent;
+    }
+
 
     @include respond(phone) {
       display: none;

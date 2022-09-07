@@ -15,19 +15,17 @@ const cartSlice = createSlice({
     // add item to cart
     addItemToCart(state, action) {
       const mealIndex = state.list.findIndex(
-        (meal) => action.payload.id === meal.id
+        (meal) => action.payload.title === meal.title
       );
 
       const meal = state.list[mealIndex];
       const existingItemIndex = state.cart.findIndex(
-        (content) => meal.id === content.id
+        (content) => meal.title === content.title
       );
 
       const existingItem = state.cart[existingItemIndex];
 
       if (!existingItem) {
-        console.log("later");
-
         state.cart.push({
           id: meal.id,
           title: meal.title,
@@ -58,13 +56,15 @@ const cartSlice = createSlice({
       // put the quantity back in the object
 
       const itemIndex = state.list.findIndex(
-        (item) => item.id === action.payload.id
+        (item) => item.title === action.payload.title
       );
       const meal = state.list[itemIndex];
 
       meal.piecesAvailable = meal.piecesAvailable + action.payload.quantity;
       //   remove the item
-      state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+      state.cart = state.cart.filter(
+        (item) => item.title !== action.payload.title
+      );
 
       // save state
       localStorage.setItem(
@@ -82,7 +82,11 @@ const cartSlice = createSlice({
       if (state.cart.length > 0) {
         // transfer items to order
         state.cart.forEach((item) => {
-          state.order.push({ ...item, status: "cooking" });
+          state.order.push({
+            ...item,
+            status: "cooking",
+            id: `${item.title.slice(2)}-${Math.trunc(Math.random() * 10000)}`,
+          });
         });
 
         // empty cart
@@ -102,6 +106,8 @@ const cartSlice = createSlice({
 
     // remove item from order
     removeOrderMealItem(state, action) {
+      // find item index
+
       //   remove the item
       state.order = state.order.filter((item) => item.id !== action.payload.id);
 

@@ -56,6 +56,7 @@
   & form {
     display: flex;
     width: 80%;
+
     @include respond(bigTablet) {
       width: 70%;
     }
@@ -65,29 +66,50 @@
       width: 100%;
     }
 
-    & input {
-      padding: 1.5rem;
-      font-size: $font-text;
-      background: #f7f7f7;
-      border: 1px solid #b3b3b3;
-      border-radius: 5px;
-      margin-right: 0.8rem;
-      font-family: $font-tertiary;
-      outline: none;
-      color: $color-primary;
-      caret-color: $color-primary;
+    & .input-div {
       flex: 1;
+      display: flex;
+      flex-direction: column;
 
-      @include respond(phone) {
-        margin-right: 0;
+      & p {
         width: 100%;
-        margin-bottom: 2rem;
+        color: $color-error;
+        padding: 1rem 0;
+
+        @include respond(phone) {
+          text-align: left;
+          padding: 1rem 0 0;
+
+          // padding: 1.5rem 2rem;
+          // align-self: flex-start;
+          // -webkit-align-self: flex-start;
+        }
       }
 
-      &::placeholder {
-        color: #b2b2b2;
+      & input {
+        padding: 1.5rem;
+        font-size: $font-text;
+        background: #f7f7f7;
+        border-radius: 5px;
+        margin-right: 0.8rem;
+        font-family: $font-tertiary;
+        outline: none;
+        color: $color-primary;
+        caret-color: $color-primary;
+        flex: 1;
+
+        @include respond(phone) {
+          margin-right: 0;
+          width: 100%;
+        }
+
+        &::placeholder {
+          color: #b2b2b2;
+        }
       }
+
     }
+
 
     & button {
       padding: 1.5rem 4rem;
@@ -98,10 +120,21 @@
       border: 1px solid $color-secondary;
       font-family: $font-tertiary;
       border-radius: 5px;
+      align-self: flex-start;
 
       @include respond(phone) {
         padding: 1.5rem 2rem;
+        align-self: stretch;
+        margin-top: 1.5rem;
       }
     }
   }
+}
+
+.input-error input {
+  border: 2px solid $color-error;
+}
+
+.input-clean input {
+  border: 1px solid #b3b3b3;
 }

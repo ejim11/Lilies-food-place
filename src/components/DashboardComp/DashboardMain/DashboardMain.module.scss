@@ -1,10 +1,26 @@
 @import "../../scss/base";
+@import "../../scss/mixin";
 
 .container {
     display: flex;
     flex-direction: column;
     width: 80%;
     padding: 0rem 6rem;
+
+    @include respond(bigTablet) {
+        padding: 0rem 3rem;
+    }
+
+    @include respond(midTablet) {
+        padding: 0rem 2rem;
+        width: 100%;
+    }
+
+    @include respond(phone) {
+        padding: 0rem 3rem;
+    }
+
+
 
 
     & .intro-box {
@@ -16,7 +32,8 @@
         & .greeting {
             font-size: 2.3rem;
             font-weight: 600;
-            color: $color-primary
+            color: $color-primary;
+            text-transform: capitalize;
         }
 
         & .greeting-question {
@@ -26,7 +43,22 @@
         }
     }
 
-    & .profile-img {
+    & .name-sign {
         margin-left: auto;
+        border-radius: 50%;
+        background-color: $color-primary;
+        font-size: 3rem;
+        font-weight: 800;
+        color: $color-text-1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 6rem;
+        width: 6rem;
+
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 }

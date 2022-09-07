@@ -1,11 +1,12 @@
 import useInput from "../../hooks/user-input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import classes from "./SignUpForm.module.scss";
 import { useState } from "react";
 import Button from "../../UI/Button/Button";
 
 const SignUpForm = () => {
   const [passwordIsVisible, setPasswordIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   const {
     value: enteredName,
@@ -40,9 +41,24 @@ const SignUpForm = () => {
 
   const loginSubmitHandler = (e) => {
     e.preventDefault();
+
+    // store data
+    localStorage.setItem(
+      "userDetails",
+      JSON.stringify({
+        name: enteredName,
+        email: enteredEmail,
+        password: enteredPassword,
+      })
+    );
+
+    // clear fields
     emailInputReset();
     PasswordInputReset();
     nameInputReset();
+
+    // navigate to login
+    navigate.push("/login");
   };
 
   let formIsValid = false;
@@ -70,7 +86,7 @@ const SignUpForm = () => {
         <div className={nameInputClasses}>
           <input
             type="text"
-            placeholder="Your First name"
+            placeholder="Your Full Name"
             value={enteredName}
             onChange={nameInputChangeHandler}
             onBlur={nameInputBlurHandler}

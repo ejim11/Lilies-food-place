@@ -11,6 +11,7 @@ const Order = () => {
   const orderState = useSelector((state) => state.cart.order);
   const dispatchFn = useDispatch();
   const headings = ["Item", "Qty", "Price", "Status"];
+
   const cartItems = orderState.map((item, i) => (
     <tr key={i} className={classes["order-box"]}>
       <td className={classes["title-box"]}>
@@ -36,7 +37,7 @@ const Order = () => {
         </div>
       </td>
       <td> {item.quantity}</td>
-      <td>N{modifyNum(String(item.price))}</td>
+      <td>N{modifyNum(String(item.totalPrice))}</td>
       <td className={classes.cooking}>{item.status}</td>
     </tr>
   ));

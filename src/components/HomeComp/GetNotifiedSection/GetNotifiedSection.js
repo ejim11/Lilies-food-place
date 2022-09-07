@@ -35,7 +35,11 @@ const GetNotifiedSection = () => {
         </p>
         <div className={classes["form-container"]}>
           <form onSubmit={getEmailHandler}>
-            <div>
+            <div
+              className={`${classes["input-div"]} ${
+                error ? classes["input-error"] : "input-clean"
+              }`}
+            >
               <input
                 placeholder="gregphillips@gmail.com"
                 type={"email"}

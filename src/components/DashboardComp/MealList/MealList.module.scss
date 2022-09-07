@@ -1,13 +1,34 @@
 @import "../../scss/base";
+@import "../../scss/mixin";
 
 .list-container {
     flex: 1;
     overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-column-gap: 8rem;
     grid-row-gap: 6rem;
     padding: 2rem 1rem 4rem;
+
+    @include respond(bigTablet) {
+        grid-row-gap: 3rem;
+        grid-column-gap: 4rem;
+    }
+
+    @include respond(tablet) {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    @include respond(midTablet) {
+        grid-row-gap: 1.5rem;
+        grid-column-gap: 2rem;
+    }
+
+    @include respond(phone) {
+        grid-row-gap: 4rem;
+        padding: 2rem 2rem 4rem;
+        overflow-y: unset;
+    }
 
     &::-webkit-scrollbar {
         width: 3px;
@@ -40,6 +61,8 @@
     align-items: center;
     text-align: center;
     padding: 2.3rem 2.9rem;
+    box-shadow: .1rem .1rem 1rem .2rem rgba($color-black, .1);
+
 
     & .meal-img {
         margin: 2.4rem 0 1.3rem;
@@ -50,6 +73,11 @@
         font-size: 1.1rem;
         font-weight: 400;
         color: rgba(0, 0, 0, 0.69);
+
+        @include respond(phone) {
+            padding: 0rem 2rem;
+        }
+
     }
 
     & h3 {
@@ -63,6 +91,7 @@
         display: flex;
         justify-content: space-between;
         font-size: 1.3rem;
+        margin-top: auto;
 
 
 

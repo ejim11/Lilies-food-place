@@ -2,10 +2,11 @@ import Button from "../../UI/Button/Button";
 import classes from "./LoginForm.module.scss";
 import { useState } from "react";
 import useInput from "../../hooks/user-input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const [passwordIsVisible, setPasswordIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   const {
     value: enteredEmail,
@@ -30,6 +31,22 @@ const LoginForm = () => {
   };
 
   const loginSubmitHandler = (e) => {
+    const userData = JSON.parse(localStorage.getItem("userDetails"));
+
+    // check details
+    if (
+      enteredEmail.toLowerCase().trim() ===
+        userData.email.toLowerCase().trim() &&
+      enteredPassword.trim() === userData.password.trim()
+    ) {
+      // navigate to dashboard
+      navigate("/dashboard");
+    } else {
+      console.log("error");
+    }
+
+    console.log(userData);
+
     e.preventDefault();
     emailInputReset();
     PasswordInputReset();
@@ -94,6 +111,9 @@ const LoginForm = () => {
       <div className={classes.links}>
         <Link to="/sign-up">Create an account</Link>
         <Link to="/forgot-password">Forgot Password</Link>
+      </div>
+      <div className = {classes["home-link"]}>
+        <Link to="/home">Return to Home</Link>
       </div>
     </div>
   );
