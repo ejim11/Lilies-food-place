@@ -1,10 +1,28 @@
 import classes from "./GetNotifiedSection.module.scss";
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
+import { useState } from "react";
 
 const GetNotifiedSection = () => {
+  const [error, setError] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+
   const getEmailHandler = (e) => {
     e.preventDefault();
+    if (!inputValue.includes("@") && inputValue.length === 0) {
+      setError(true);
+      console.log("value", inputValue.length);
+    }
+  };
+
+  const checkEmailHandler = (e) => {
+    setInputValue(e.target.value);
+
+    if (e.target.value.trim() === "") {
+      setError(false);
+    } else {
+      setError(false);
+    }
   };
 
   return (
@@ -17,7 +35,15 @@ const GetNotifiedSection = () => {
         </p>
         <div className={classes["form-container"]}>
           <form onSubmit={getEmailHandler}>
-            <input placeholder="gregphillips@gmail.com" type={"email"} />
+            <div>
+              <input
+                placeholder="gregphillips@gmail.com"
+                type={"email"}
+                onChange={checkEmailHandler}
+                value={inputValue}
+              />
+              {error && <p>Fill in a valid email</p>}
+            </div>
             <Button type={"submit"}>Get notified</Button>
           </form>
         </div>

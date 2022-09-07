@@ -42,8 +42,8 @@ const LoginForm = () => {
   }
 
   const emailInputClasses = enteredEmailIsInValid
-    ? ` ${classes["invalid"]}`
-    : `${classes["valid"]}`;
+    ? `${classes["email-div"]} ${classes["invalid"]}`
+    : `${classes["email-div"]} ${classes["valid"]}`;
 
   const passwordInputClasses = enteredPasswordIsInValid
     ? ` ${classes["password-div"]} ${classes["invalid"]}`

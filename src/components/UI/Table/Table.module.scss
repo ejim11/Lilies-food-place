@@ -1,0 +1,50 @@
+@import "../../scss/base";
+
+.table-box {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $color-white
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgba($color-primary, .1);
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+
+    & table {
+        width: 100%;
+        color: $color-primary;
+        border-collapse: separate;
+        border-spacing: 1rem 1rem;
+
+        & th {
+            text-align: left;
+            padding: 1rem 0;
+            font-size: 1.2rem;
+
+            &:not(.th-0) {
+                text-align: center;
+                padding: 1rem;
+            }
+        }
+
+
+
+
+
+    }
+}

@@ -9,8 +9,10 @@ const cartSlice = createSlice({
     cart: storedData?.cart || [],
     totalAmount: 0,
     list: storedData?.data || mealListData,
+    order: storedData?.order || [],
   },
   reducers: {
+    // add item to cart
     addItemToCart(state, action) {
       const mealIndex = state.list.findIndex(
         (meal) => action.payload.id === meal.id
@@ -44,13 +46,16 @@ const cartSlice = createSlice({
 
       localStorage.setItem(
         "mealsData",
-        JSON.stringify({ data: state.list, cart: state.cart })
+        JSON.stringify({
+          data: state.list,
+          cart: state.cart,
+          order: state.order,
+        })
       );
     },
-
+    // remove item from cart
     removeMealItem(state, action) {
       // put the quantity back in the object
-      console.log(state);
 
       const itemIndex = state.list.findIndex(
         (item) => item.id === action.payload.id
@@ -64,7 +69,50 @@ const cartSlice = createSlice({
       // save state
       localStorage.setItem(
         "mealsData",
-        JSON.stringify({ data: state.list, cart: state.cart })
+        JSON.stringify({
+          data: state.list,
+          cart: state.cart,
+          order: state.order,
+        })
+      );
+    },
+
+    // add item to order
+    moveCartItemsToOrder(state) {
+      if (state.cart.length > 0) {
+        // transfer items to order
+        state.cart.forEach((item) => {
+          state.order.push({ ...item, status: "cooking" });
+        });
+
+        // empty cart
+        state.cart = [];
+
+        // save state
+        localStorage.setItem(
+          "mealsData",
+          JSON.stringify({
+            data: state.list,
+            cart: state.cart,
+            order: state.order,
+          })
+        );
+      }
+    },
+
+    // remove item from order
+    removeOrderMealItem(state, action) {
+      //   remove the item
+      state.order = state.order.filter((item) => item.id !== action.payload.id);
+
+      // save state
+      localStorage.setItem(
+        "mealsData",
+        JSON.stringify({
+          data: state.list,
+          cart: state.cart,
+          order: state.order,
+        })
       );
     },
   },

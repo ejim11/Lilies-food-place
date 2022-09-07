@@ -1,0 +1,98 @@
+@import "../../scss/base";
+
+.checkout {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 5rem;
+
+    &-heading {
+        margin: 6rem 0 4rem;
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $color-primary;
+    }
+
+    & form {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        & .cover-div {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            & input {
+                width: 100%;
+                padding: 1.9rem 2.5rem;
+                background: rgba(255, 255, 255, 0.83);
+                border-radius: 5px;
+                outline: none;
+                width: 100%;
+                caret-color: $color-primary;
+                color: $color-primary;
+
+                &::placeholder {
+                    color: #00302e87;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                }
+
+                /* Chrome, Safari, Edge, Opera */
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+            }
+        }
+
+        & .valid .input {
+            border: 1px solid rgba(251, 221, 187, 0.51);
+
+            &:focus {
+                border-color: $color-primary;
+            }
+        }
+
+        .invalid input {
+            border: 1px solid red;
+        }
+
+
+        .form-btn {
+            margin-top: auto;
+            background-color: $color-primary;
+            color: $color-secondary;
+            border: 1px solid $color-primary;
+            padding: 1.7rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+
+            &:disabled,
+            &:disabled:hover,
+            &:disabled:active {
+                background-color: #ccc;
+                color: $color-white;
+                border-color: #ccc;
+                cursor: not-allowed;
+            }
+        }
+
+        .error-msg {
+            font-size: 1.2rem;
+            margin: 1rem 0 0;
+            color: $color-error;
+        }
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+
+
+}

@@ -11,7 +11,7 @@ import { useSelector } from "react-redux/es/exports";
 const DashboardLinks = () => {
   const location = useLocation();
   const mealCartState = useSelector((state) => state.cart.cart);
-  console.log(mealCartState);
+  const mealOrderState = useSelector((state) => state.cart.order);
 
   const locationActive = location.pathname.split("/").slice(-1)[0];
 
@@ -62,7 +62,8 @@ const DashboardLinks = () => {
                 }
               >
                 <ImGift className={classes.icon} />
-                Orders <span className={classes.order}>5</span>
+                Orders{" "}
+                <span className={classes.order}>{mealOrderState.length}</span>
               </NavLink>
             </li>
             <li>

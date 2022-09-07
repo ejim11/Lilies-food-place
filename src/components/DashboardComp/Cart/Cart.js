@@ -5,10 +5,15 @@ import Button from "../../UI/Button/Button";
 import modifyNum from "../../Helper fns/modifyAmount";
 import { cartActions } from "../../store/cartSlice";
 import emptyCartImg from "../../../assets/empty-cart.svg";
+import { useNavigate } from "react-router-dom";
+import Table from "../../UI/Table/Table";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const cartState = useSelector((state) => state.cart.cart);
   const dispatchFn = useDispatch();
+
+  const headings = ["Item", "Qty", "Unit Price", "Sub-total"];
 
   const cartItems = cartState.map((item, i) => (
     <tr key={i} className={classes["cart-box"]}>
@@ -16,7 +21,7 @@ const Cart = () => {
         <div className={classes["title-box-img"]}>
           <img src={item.src} alt={item.title} />
         </div>
-        <div>
+        <div className={classes["title-text"]}>
           <p>{item.title}</p>
           <Button
             type={"type"}
@@ -48,35 +53,28 @@ const Cart = () => {
     <Modal childClassName={classes["cart"]}>
       {cartState.length > 0 && <p className={classes.heading}>Your cart</p>}
       {cartState.length === 0 && (
-        <p className={classes["empty-cart"]}>Your cart is empty</p>
-      )}
-      {cartState.length === 0 && (
         <div>
-          <img src={emptyCartImg} alt="empty-cart-img" />
+          <p className={classes["empty-cart"]}>Your cart is empty</p>
+          <div>
+            <img src={emptyCartImg} alt="empty-cart-img" />
+          </div>
         </div>
       )}
-      {cartState.length > 0 && (
-        <div className={classes["table-box"]}>
-          <table>
-            <thead>
-              <tr>
-                <th className={classes["first"]}>Item</th>
-                <th>Qty</th>
-                <th>Unit Price</th>
-                <th>Sub-total</th>
-              </tr>
-            </thead>
-            <tbody>{cartItems}</tbody>
-          </table>
-        </div>
-      )}
+
+      {cartState.length > 0 && <Table headings={headings}>{cartItems}</Table>}
       {cartState.length > 0 && (
         <div className={classes.total}>
           Total: <span>N{modifyNum(String(totalPrice))}</span>
         </div>
       )}
       {cartState.length > 0 && (
-        <Button type={"type"} className={classes["checkout-btn"]}>
+        <Button
+          type={"type"}
+          className={classes["checkout-btn"]}
+          onClick={() => {
+            navigate("/dashboard/checkout");
+          }}
+        >
           Checkout
         </Button>
       )}

@@ -5,10 +5,11 @@ import Login from "./components/Pages/Login";
 import SignUp from "./components/Pages/SignUp";
 import Dashboard from "./components/Pages/Dashboard";
 import DashboardMain from "./components/DashboardComp/DashboardMain/DashboardMain";
-import Profile from "./components/DashboardComp/Profile/Profile";
-import Order from "./components/DashboardComp/Order/Order";
-import Cart from "./components/DashboardComp/Cart/Cart";
-import AddToCart from "./components/DashboardComp/AddToCart/AddToCart";
+import ProfilePage from "./components/Pages/ProfilePage";
+import AddToCartPage from "./components/Pages/AddToCartPage";
+import CartPage from "./components/Pages/CartPage";
+import OrderPage from "./components/Pages/OrderPage";
+import CheckoutPage from "./components/Pages/CheckoutPage";
 
 function App() {
   return (
@@ -20,11 +21,12 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route path="" element={<DashboardMain />}>
-            <Route path="order" element={<Order />} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="add-to-cart/:mealId" element={<AddToCart />} />
+            <Route path="order" element={<OrderPage />} />
+            <Route path="cart" element={<CartPage />} />
+            <Route path="add-to-cart/:mealId" element={<AddToCartPage />} />
+            <Route path="/dashboard/checkout" element={<CheckoutPage />} />
           </Route>
-          <Route path="profile" element={<Profile />} />
+          <Route path="profile" element={<ProfilePage />} />
         </Route>
       </Routes>
     </>
