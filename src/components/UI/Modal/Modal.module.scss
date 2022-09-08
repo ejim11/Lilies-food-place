@@ -12,6 +12,10 @@
     display: flex;
     cursor: pointer;
 
+    @include respond(midTablet) {
+        background-color: $color-white;
+    }
+
     & .modal-child {
         margin-left: auto;
         background-color: $color-white;
@@ -19,9 +23,9 @@
 
 
 
-        @include respond(phone) {
+        @include respond(midTablet) {
             width: 100%;
-            min-height: 100vh;
+            height: 90vh;
         }
     }
 }
