@@ -12,7 +12,8 @@ const DashboardMain = () => {
   const nameSign = JSON.parse(localStorage.getItem("userDetails"))
     .name.split(" ")
     .map((item) => item[0])
-    .join("");
+    .join("")
+    .toUpperCase();
 
   const setGreeting = () => {
     const greeting =

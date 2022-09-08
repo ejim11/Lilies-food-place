@@ -25,10 +25,14 @@
 
     @include respond(midTablet) {
         width: 70%;
+        padding: 3rem;
+
     }
 
+
+
     & .img {
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
 
     & .text {

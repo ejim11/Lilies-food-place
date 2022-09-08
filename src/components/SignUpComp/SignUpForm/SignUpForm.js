@@ -58,7 +58,7 @@ const SignUpForm = () => {
     nameInputReset();
 
     // navigate to login
-    navigate.push("/login");
+    navigate("/login");
   };
 
   let formIsValid = false;

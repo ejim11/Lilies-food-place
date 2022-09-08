@@ -16,12 +16,10 @@
 
     @include respond(midTablet) {
         width: 70%;
-        padding: 3rem;
+        padding: 2rem 2rem 7rem;
     }
 
-    @include respond(phone) {
-        padding: 2rem;
-    }
+
 
 
 
