@@ -53,9 +53,9 @@ const Cart = () => {
     <Modal childClassName={classes["cart"]}>
       {cartState.length > 0 && <p className={classes.heading}>Your cart</p>}
       {cartState.length === 0 && (
-        <div>
-          <p className={classes["empty-cart"]}>Your cart is empty</p>
-          <div>
+        <div className={classes["empty-cart"]}>
+          <p className={classes["empty-cart-p"]}>Your cart is empty</p>
+          <div className={classes["empty-cart-img"]}>
             <img src={emptyCartImg} alt="empty-cart-img" />
           </div>
         </div>
