@@ -1,0 +1,32 @@
+@import "../scss/base";
+@import "../scss/mixin";
+
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0 0 6rem;
+
+    @include respond(phone) {
+        margin: 0 0 10rem;
+    }
+
+    & .picture-box {
+        width: 12rem;
+        height: 12rem;
+        position: relative;
+        cursor: pointer;
+
+        & .icon {
+            position: absolute;
+            top: 4.5rem;
+            left: 4.5rem;
+            height: 3.5rem;
+            width: 3.5rem;
+            color: rgba($color-white, .5)
+        }
+    }
+
+
+}

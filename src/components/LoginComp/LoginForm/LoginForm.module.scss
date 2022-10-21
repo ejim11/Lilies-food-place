@@ -4,6 +4,7 @@
 .form-container {
   width: 100%;
   padding: 0 5rem;
+  margin: auto 0;
 
   @include respond(smallPhone) {
     padding: 0 2rem;

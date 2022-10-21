@@ -1,138 +1,139 @@
-@import "../../scss/base";
-@import "../../scss/mixin";
+// @import "../../scss/base";
+// @import "../../scss/mixin";
 
-.form-container {
-  width: 100%;
-  padding: 0 5rem;
+// .form-container {
+//   width: 100%;
+//   padding: 0 5rem;
+//   margin: auto 0;
 
-  @include respond(smallPhone) {
-    padding: 0 2rem;
-  }
+//   @include respond(smallPhone) {
+//     padding: 0 2rem;
+//   }
 
-  & h3 {
-    text-align: center;
-    font-size: 2.7rem;
-    font-weight: 600;
-    margin: 0 0 6.1rem;
-    color: $color-primary;
+//   & h3 {
+//     text-align: center;
+//     font-size: 2.7rem;
+//     font-weight: 600;
+//     margin: 0 0 6.1rem;
+//     color: $color-primary;
 
-    @include orient(phone) {
-      margin: 1rem 0 2.1rem;
-    }
-  }
+//     @include orient(phone) {
+//       margin: 1rem 0 2.1rem;
+//     }
+//   }
 
-  & form {
-    display: flex;
-    flex-direction: column;
+//   & form {
+//     display: flex;
+//     flex-direction: column;
 
-    & input {
-      padding: 1.9rem 2.5rem;
-      background: rgba(255, 255, 255, 0.83);
-      border-radius: 5px;
-      outline: none;
-      width: 100%;
-      caret-color: $color-primary;
-      color: $color-primary;
+//     & input {
+//       padding: 1.9rem 2.5rem;
+//       background: rgba(255, 255, 255, 0.83);
+//       border-radius: 5px;
+//       outline: none;
+//       width: 100%;
+//       caret-color: $color-primary;
+//       color: $color-primary;
 
-      &::placeholder {
-        color: #00302e87;
-        font-size: 1.4rem;
-        font-weight: 400;
-      }
-    }
+//       &::placeholder {
+//         color: #00302e87;
+//         font-size: 1.4rem;
+//         font-weight: 400;
+//       }
+//     }
 
-    & .valid .input {
-      border: 1px solid rgba(251, 221, 187, 0.51);
+//     & .valid .input {
+//       border: 1px solid rgba(251, 221, 187, 0.51);
 
-      &:focus {
-        border-color: $color-primary;
-      }
-    }
+//       &:focus {
+//         border-color: $color-primary;
+//       }
+//     }
 
-    .invalid input {
-      border: 1px solid red;
-    }
+//     .invalid input {
+//       border: 1px solid red;
+//     }
 
-    & .name-div {
-      width: 100%;
-      margin: 0 0 4.8rem;
+//     & .name-div {
+//       width: 100%;
+//       margin: 0 0 4.8rem;
 
-      @include orient(phone) {
-        margin: 0 0 2.8rem;
-      }
-    }
+//       @include orient(phone) {
+//         margin: 0 0 2.8rem;
+//       }
+//     }
 
-    & .password-div {
-      width: 100%;
-      margin: 4.8rem 0;
-      position: relative;
+//     & .password-div {
+//       width: 100%;
+//       margin: 4.8rem 0;
+//       position: relative;
 
-      @include orient(phone) {
-        margin: 2.8rem 0;
-      }
+//       @include orient(phone) {
+//         margin: 2.8rem 0;
+//       }
 
-      & .show-password {
-        position: absolute;
-        top: 1.9rem;
-        right: 2.5rem;
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: $color-primary;
-        cursor: pointer;
-      }
-    }
+//       & .show-password {
+//         position: absolute;
+//         top: 1.9rem;
+//         right: 2.5rem;
+//         font-size: 1.4rem;
+//         font-weight: 400;
+//         color: $color-primary;
+//         cursor: pointer;
+//       }
+//     }
 
-    & .form-btn {
-      background-color: $color-primary;
-      border: 1px solid $color-primary;
-      border-radius: 5px;
-      padding: 1.95rem 0;
-      color: $color-secondary;
-      font-size: $font-text;
+//     & .form-btn {
+//       background-color: $color-primary;
+//       border: 1px solid $color-primary;
+//       border-radius: 5px;
+//       padding: 1.95rem 0;
+//       color: $color-secondary;
+//       font-size: $font-text;
 
-      &:disabled,
-      &:disabled:hover,
-      &:disabled:active {
-        background-color: #ccc;
-        color: $color-white;
-        border-color: #ccc;
-        cursor: not-allowed;
-      }
-    }
-  }
-}
+//       &:disabled,
+//       &:disabled:hover,
+//       &:disabled:active {
+//         background-color: #ccc;
+//         color: $color-white;
+//         border-color: #ccc;
+//         cursor: not-allowed;
+//       }
+//     }
+//   }
+// }
 
-.links {
-  display: flex;
-  align-items: center;
-  margin-top: 3.4rem;
-  justify-content: space-between;
+// .links {
+//   display: flex;
+//   align-items: center;
+//   margin-top: 3.4rem;
+//   justify-content: space-between;
 
-  @include orient(phone) {
-    margin-top: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
+//   @include orient(phone) {
+//     margin-top: 1.8rem;
+//     margin-bottom: 1.5rem;
+//   }
 
-  & p {
-    width: 100%;
-    display: flex;
-    font-size: 1.4rem;
-    color: rgba(0, 48, 46, 0.91);
-    text-align: center;
-    justify-content: center;
+//   & p {
+//     width: 100%;
+//     display: flex;
+//     font-size: 1.4rem;
+//     color: rgba(0, 48, 46, 0.91);
+//     text-align: center;
+//     justify-content: center;
 
-    & a {
-      display: block;
-      text-decoration: none;
-      font-weight: 400;
-      color: currentColor;
-      margin-left: 0.5rem;
-    }
-  }
-}
+//     & a {
+//       display: block;
+//       text-decoration: none;
+//       font-weight: 400;
+//       color: currentColor;
+//       margin-left: 0.5rem;
+//     }
+//   }
+// }
 
-.error-msg {
-  font-size: 1.2rem;
-  margin: 1rem 0 0;
-  color: $color-error;
-}
+// .error-msg {
+//   font-size: 1.2rem;
+//   margin: 1rem 0 0;
+//   color: $color-error;
+// }

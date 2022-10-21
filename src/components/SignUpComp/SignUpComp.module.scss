@@ -1,7 +1,30 @@
+@import "../scss/base";
+@import "../scss/mixin";
+
 .sign-up-img {
   background: url("../../assets/sign-up-img.jpg"), rgba(226, 184, 135, 0.9);
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+
+.sign-up-switch-btn {
+  align-self: flex-end;
+  margin: 3rem 5rem 0 0;
+  padding: 1rem 3rem;
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: $font-text;
+
+  @include respond(phone) {
+    margin: 3rem 2.5rem 0 0;
+  }
+
+  &:hover {
+    color: $color-primary;
+    background-color: transparent;
+  }
 }
