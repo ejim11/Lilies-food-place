@@ -1,4 +1,4 @@
-import Cart from "../DashboardComp/Cart/Cart";
+import Cart from "../components/DashboardComp/Cart/Cart";
 
 const CartPage = () => {
   return (

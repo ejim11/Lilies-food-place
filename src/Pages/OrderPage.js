@@ -1,4 +1,4 @@
-import Order from "../DashboardComp/Order/Order";
+import Order from "../components/DashboardComp/Order/Order";
 
 const OrderPage = () => {
   return (

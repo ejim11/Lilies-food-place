@@ -1,4 +1,4 @@
-import SignUpComp from "../SignUpComp/SignUpComp";
+import SignUpComp from "../components/SignUpComp/SignUpComp";
 
 const SignUp = () => {
   return (

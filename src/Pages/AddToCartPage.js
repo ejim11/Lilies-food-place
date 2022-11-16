@@ -1,4 +1,4 @@
-import AddToCart from "../DashboardComp/AddToCart/AddToCart";
+import AddToCart from "../components/DashboardComp/AddToCart/AddToCart";
 
 const AddToCartPage = () => {
   return (

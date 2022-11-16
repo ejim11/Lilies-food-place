@@ -1,4 +1,4 @@
-import LoginComp from "../LoginComp/LoginComp";
+import LoginComp from "../components/LoginComp/LoginComp";
 
 const Login = () => {
   return (
