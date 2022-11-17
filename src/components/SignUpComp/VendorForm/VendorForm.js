@@ -140,10 +140,24 @@ const VendorForm = () => {
     ? ` ${classes["password-div"]} ${classes["invalid"]} ${classes["middle-div"]}`
     : `${classes["valid"]} ${classes["password-div"]} ${classes["middle-div"]}`;
 
+  const vendorSignUpFormHandler = (e) => {
+    e.preventDefault();
+
+    const vendorData = {
+      name: enteredName,
+      company_name: enteredCompanyName,
+      email: enteredEmail,
+      password: enteredPassword,
+      password_confirmation: enteredConfirmPassword,
+      address: enteredAddress,
+      phone: enteredNumber,
+    };
+  };
+
   return (
     <div className={classes["form-container"]}>
       <h3>Welcome to Lilies!</h3>
-      <form>
+      <form onSubmit={vendorSignUpFormHandler}>
         {/* first page */}
         {pageState === 0 && (
           <div>

@@ -7,12 +7,29 @@ const GetNotifiedSection = () => {
   const [error, setError] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
-  const getEmailHandler = (e) => {
+  const getEmailHandler = async (e) => {
     e.preventDefault();
     if (!inputValue.includes("@") && inputValue.length === 0) {
       setError(true);
-      console.log("value", inputValue.length);
+      return;
     }
+    console.log(inputValue);
+    try {
+      const res = await fetch("http://127.0.0.1:8000/api/subscribe", {
+        method: "POST",
+        body: { form: inputValue },
+        headers: {
+          "content-type": "application/json",
+        },
+      });
+
+      console.log(res);
+    } catch (err) {
+      console.log(err.message);
+    }
+
+    // reseting the value of the input
+    setInputValue("");
   };
 
   const checkEmailHandler = (e) => {

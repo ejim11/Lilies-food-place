@@ -6,27 +6,43 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin: 0 0 6rem;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 4rem;
 
     @include respond(phone) {
-        margin: 0 0 10rem;
+        margin: 0 0 8rem;
     }
 
     & .picture-box {
-        width: 12rem;
-        height: 12rem;
+        width: 16rem;
+        height: 16rem;
         position: relative;
         cursor: pointer;
+        border-radius: 100%;
+        // overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid $color-primary;
+
+        & img {
+            height: 14rem;
+            width: 14rem;
+            border-radius: 100%;
+        }
 
         & .icon {
             position: absolute;
-            top: 4.5rem;
-            left: 4.5rem;
-            height: 3.5rem;
-            width: 3.5rem;
-            color: rgba($color-white, .5)
+            bottom: .5rem;
+            right: -.2rem;
+            height: 3rem;
+            width: 3rem;
+            color: $color-primary;
         }
     }
 
-
+    & .profile-img-input {
+        display: none;
+    }
 }
