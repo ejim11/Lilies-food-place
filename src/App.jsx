@@ -52,7 +52,7 @@ function App() {
           </Route>
         )}
         {/* </ProtectedRoutes> */}
-        {/* <Route path="*" element={<Navigate to={"/home"} />} /> */}
+        <Route path="*" element={<Navigate to={"/home"} />} />
       </Routes>
     </>
   );
