@@ -1,0 +1,66 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.meal-item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.83);
+    border: 0.3px solid rgba(0, 48, 46, 0.14);
+    border-radius: .5rem;
+    align-items: center;
+    text-align: center;
+    padding: 2.3rem 2.9rem;
+    box-shadow: .1rem .1rem 1rem .2rem rgba($color-black, .1);
+
+
+    & .meal-img {
+        margin: 2.4rem 0 1.3rem;
+    }
+
+    & .meal-text {
+        margin: .5rem 0 3rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.69);
+
+        @include respond(phone) {
+            padding: 0rem 2rem;
+        }
+
+    }
+
+    & h3 {
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $color-primary;
+    }
+
+    & .meal-amount-box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        margin-top: auto;
+
+
+
+        & p {
+            font-weight: 700;
+            column-rule-color: $color-primary;
+        }
+
+        & .btn-add-to-cart {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: #06E775;
+            font-weight: 500;
+            transition: all .3s ease;
+
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
