@@ -1,0 +1,21 @@
+.link-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+.link-container ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+}
+
+.active-link {
+  background-color: #eee;
+  border-bottom: 1px solid #00302e;
+}
+/*# sourceMappingURL=DashboardSubNavigation.module.css.map */

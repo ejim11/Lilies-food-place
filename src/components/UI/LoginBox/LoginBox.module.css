@@ -1,0 +1,69 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.container .img-box {
+  height: 100vh;
+}
+
+@media (orientation: landscape) and (max-height: 24.375em) {
+  .container .img-box {
+    height: 120vh;
+  }
+}
+
+.container .img-box {
+  width: 55%;
+}
+
+@media (max-width: 75em) {
+  .container .img-box {
+    width: 45%;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .container .img-box {
+    width: 40%;
+  }
+}
+
+@media (max-width: 34.375em) {
+  .container .img-box {
+    display: none;
+  }
+}
+
+.container .form-box {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 75em) {
+  .container .form-box {
+    width: 55%;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .container .form-box {
+    width: 60%;
+  }
+}
+
+@media (max-width: 34.375em) {
+  .container .form-box {
+    width: 100%;
+    height: 80vh;
+  }
+}
+/*# sourceMappingURL=LoginBox.module.css.map */

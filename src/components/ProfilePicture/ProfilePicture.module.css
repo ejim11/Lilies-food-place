@@ -1,0 +1,61 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 4rem;
+}
+
+@media (max-width: 34.375em) {
+  .container {
+    margin: 0 0 8rem;
+  }
+}
+
+.container .picture-box {
+  width: 16rem;
+  height: 16rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 3px solid #00302e;
+}
+
+.container .picture-box img {
+  height: 14rem;
+  width: 14rem;
+  border-radius: 100%;
+}
+
+.container .picture-box .icon {
+  position: absolute;
+  bottom: .5rem;
+  right: -.2rem;
+  height: 3rem;
+  width: 3rem;
+  color: #00302e;
+}
+
+.container .profile-img-input {
+  display: none;
+}
+/*# sourceMappingURL=ProfilePicture.module.css.map */

@@ -1,0 +1,24 @@
+.card {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 140.625em) {
+  .card {
+    width: 75%;
+  }
+}
+
+@media (max-width: 121.875em) {
+  .card {
+    width: 85%;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .card {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=Card.module.css.map */

@@ -2,6 +2,34 @@
 @import "../../scss/mixin";
 
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black, .3);
+    display: flex;
+    cursor: pointer;
+
+    @include respond(midTablet) {
+        background-color: $color-white;
+    }
+
+    & .modal-child {
+        margin-left: auto;
+        background-color: $color-white;
+        cursor: default;
+
+
+
+        @include respond(midTablet) {
+            width: 100%;
+            height: 85vh;
+        }
+    }
+}
+
 .child-box {
     width: 35%;
     display: flex;
@@ -9,6 +37,8 @@
     padding: 6rem;
     align-items: center;
     text-align: center;
+    background-color: $color-white;
+    margin-left: auto;
     // justify-content: center;
 
     @include respond(miniLaptop) {
@@ -24,9 +54,8 @@
     }
 
     @include respond(midTablet) {
-        width: 70%;
+        width: 100%;
         padding: 3rem;
-
     }
 
 
@@ -120,5 +149,20 @@
                 padding: 0 1rem;
             }
         }
+    }
+}
+
+.back-btn {
+    align-self: flex-start;
+    background: transparent;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    padding: .5rem 1.5rem;
+    font-size: $font-text;
+    margin-bottom: 1rem;
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
     }
 }

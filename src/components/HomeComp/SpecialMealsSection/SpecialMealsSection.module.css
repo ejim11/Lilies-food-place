@@ -1,0 +1,48 @@
+.special-meals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 14rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.special-meals h2 {
+  font-size: 3.5rem;
+  color: #ffffffde;
+  font-weight: 700;
+  text-align: center;
+}
+
+.special-meals .text {
+  font-size: 1.8rem;
+  color: #ffffffbd;
+  margin: 3.5rem auto;
+  width: 60%;
+  text-align: center;
+}
+
+@media (max-width: 75em) {
+  .special-meals .text {
+    width: 80%;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .special-meals .text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 34.375em) {
+  .special-meals .text {
+    width: 100%;
+    margin: 2.5rem auto 1.5rem;
+  }
+}
+/*# sourceMappingURL=SpecialMealsSection.module.css.map */

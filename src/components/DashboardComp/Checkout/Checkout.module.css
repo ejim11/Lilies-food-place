@@ -1,0 +1,144 @@
+.checkout {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 6rem 2rem 5rem;
+  /* Firefox */
+}
+
+@media (max-width: 75em) {
+  .checkout {
+    width: 50%;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .checkout {
+    width: 60%;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .checkout {
+    width: 75%;
+    padding: 3rem;
+  }
+}
+
+.checkout-heading {
+  margin: 6rem 0 4rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #00302e;
+}
+
+.checkout form {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.checkout form .cover-div {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.checkout form .cover-div input {
+  width: 100%;
+  padding: 1.9rem 2.5rem;
+  background: rgba(255, 255, 255, 0.83);
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  caret-color: #00302e;
+  color: #00302e;
+  /* Chrome, Safari, Edge, Opera */
+}
+
+.checkout form .cover-div input::-webkit-input-placeholder {
+  color: #00302e87;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.checkout form .cover-div input:-ms-input-placeholder {
+  color: #00302e87;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.checkout form .cover-div input::-ms-input-placeholder {
+  color: #00302e87;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.checkout form .cover-div input::placeholder {
+  color: #00302e87;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.checkout form .cover-div input::-webkit-outer-spin-button, .checkout form .cover-div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.checkout form .valid .input {
+  border: 1px solid rgba(251, 221, 187, 0.51);
+}
+
+.checkout form .valid .input:focus {
+  border-color: #00302e;
+}
+
+.checkout form .invalid input {
+  border: 1px solid red;
+}
+
+.checkout form .form-btn {
+  margin-top: auto;
+  background-color: #00302e;
+  color: #fbddbb;
+  border: 1px solid #00302e;
+  padding: 1.7rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@media (max-width: 59.375em) {
+  .checkout form .form-btn {
+    width: 100%;
+  }
+}
+
+.checkout form .form-btn:disabled, .checkout form .form-btn:disabled:hover, .checkout form .form-btn:disabled:active {
+  background-color: #ccc;
+  color: #fff;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.checkout form .error-msg {
+  font-size: 1.2rem;
+  margin: 1rem 0 0;
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.checkout input[type=number] {
+  -moz-appearance: textfield;
+}
+/*# sourceMappingURL=Checkout.module.css.map */

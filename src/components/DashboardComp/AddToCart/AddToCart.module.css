@@ -1,0 +1,138 @@
+.child-box {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 6rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 75em) {
+  .child-box {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 50%;
+    min-height: 100vh;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .child-box {
+    width: 60%;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .child-box {
+    width: 70%;
+    padding: 3rem;
+  }
+}
+
+.child-box .img {
+  margin-top: 3rem;
+}
+
+.child-box .text h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00302e;
+  margin: 1rem 0 1.5rem;
+}
+
+.child-box .text p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.69);
+  line-height: 2.7rem;
+}
+
+.child-box .price-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 4.1rem 0;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.child-box .price-box p {
+  color: #00302e;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+.child-box .amount-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 1rem 0 0;
+}
+
+.child-box .amount-box .add-to-cart-btn {
+  padding: 1rem 3.5rem;
+  color: #fff;
+  background-color: #00302e;
+  border: 1px solid #00302e;
+  font-size: 1.4rem;
+}
+
+.child-box .amount-box .add-to-cart-btn:hover {
+  color: #00302e;
+  background-color: transparent;
+}
+
+.child-box .amount-box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.child-box .amount-box div .operation-btn {
+  background-color: #F3C294;
+  color: #00302e;
+  width: 3.5rem;
+  border: 1px solid #F3C294;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.child-box .amount-box div .operation-btn:hover {
+  background-color: transparent;
+  border-color: #00302e;
+}
+
+.child-box .amount-box div P {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #00302e;
+  padding: 0 1rem;
+}
+/*# sourceMappingURL=AddToCart.module.css.map */

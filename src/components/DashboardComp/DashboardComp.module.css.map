@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,KAAK,CAAC;EACF,OAAO,EAAE,IAAI;EACb,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EAAE,yBAAyB;EAC3C,QAAQ,EAAE,MAAM;CAOnB;;ACIG,MAAM,EAAE,SAAS,EAAE,QAAQ;EDhB/B,AAAA,KAAK,CAAC;IAQE,cAAc,EAAE,MAAM;IACtB,UAAU,EAAE,IAAI;IAChB,MAAM,EAAE,WAAW;GAE1B",
+    "sources": [
+        "DashboardComp.module.scss",
+        "../scss/_mixin.scss"
+    ],
+    "names": [],
+    "file": "DashboardComp.module.css"
+}

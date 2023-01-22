@@ -1,0 +1,47 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
+.link-container {
+    margin-bottom: 1rem;
+
+    & ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+        @include respond(phone) {
+            // width: 90%;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                height: 0px;
+            }
+        }
+
+
+        & li a {
+            display: block;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            transition: all .2s ease;
+            font-size: 1.5rem;
+
+            @include respond(phone) {
+                width: max-content;
+            }
+
+
+        }
+    }
+}
+
+.active-link {
+    background-color: #eee;
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
+}
+
+.in-active-link {
+    border-bottom: 1px solid #fff;
+    color: $color-tertiary;
+}

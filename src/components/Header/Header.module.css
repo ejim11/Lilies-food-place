@@ -1,0 +1,126 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 34.375em) {
+  .header .logo {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+.header .logo p {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 3rem;
+}
+
+@media (max-width: 34.375em) {
+  .header .logo p {
+    margin-left: 1.5rem;
+  }
+}
+
+.header a {
+  font-size: 2rem;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.header .login {
+  margin: 0 4.5rem;
+  font-size: 2rem;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+}
+
+.header .login:hover {
+  color: #fbddbb;
+}
+
+@media (max-width: 46.875em) {
+  .header .login {
+    margin: 0 2.5rem;
+  }
+}
+
+@media (max-width: 34.375em) {
+  .header .login {
+    border: 1px solid #fff;
+    padding: 1rem;
+    margin: 0 0 0 1.5rem;
+  }
+}
+
+.header .dashboard {
+  margin: 0 2.5rem;
+  font-size: 2rem;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+}
+
+.header .dashboard:hover {
+  color: #fbddbb;
+}
+
+@media (max-width: 46.875em) {
+  .header .dashboard {
+    margin: 0 2.5rem;
+  }
+}
+
+@media (max-width: 34.375em) {
+  .header .dashboard {
+    border: 1px solid #fff;
+    padding: .5rem;
+    margin: 0 0 0 1rem;
+  }
+}
+
+.header .sign-up {
+  font-size: 2rem;
+  background-color: #fbddbb;
+  color: #00302e;
+  padding: 1rem 3.5rem;
+  border-radius: 0.7rem;
+  border: 1px solid #fbddbb;
+  font-weight: 600;
+}
+
+.header .sign-up:hover {
+  color: #fbddbb;
+  background-color: transparent;
+}
+
+@media (max-width: 34.375em) {
+  .header .sign-up {
+    display: none;
+  }
+}
+
+.active {
+  color: #fbddbb;
+}
+/*# sourceMappingURL=Header.module.css.map */

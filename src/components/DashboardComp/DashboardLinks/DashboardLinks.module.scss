@@ -165,6 +165,10 @@
             //opacity: 1;
             @include respond(midTablet) {
                 transform: translate(0);
+                -webkit-transform: translate(0);
+                -moz-transform: translate(0);
+                -ms-transform: translate(0);
+                -o-transform: translate(0);
             }
         }
 
@@ -192,4 +196,53 @@
         background: #EFEFEF;
         border-radius: 1.2rem;
     }
+}
+
+.cart-link {
+    text-decoration: none;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1rem;
+    align-items: center;
+    cursor: pointer;
+    color: #707070;
+
+    &:hover {
+        background: #EFEFEF;
+        border-radius: 1.2rem;
+    }
+
+    & .icon {
+        margin-right: 1.5rem;
+        height: 2.3rem;
+        width: 2.3rem;
+        color: currentColor;
+    }
+
+    & span {
+        margin-left: auto;
+        padding: 0 .5rem;
+        color: $color-black;
+        font-size: 1.6rem;
+        font-weight: 500;
+        width: 2.5rem;
+        text-align: center;
+    }
+
+    & .order {
+        background-color: #06E775;
+
+    }
+
+    & .cart {
+        background-color: #F3C294
+    }
+}
+
+.cart-link-active {
+    color: $color-black;
+    background: #EFEFEF;
+    border-radius: 1.2rem;
+
 }

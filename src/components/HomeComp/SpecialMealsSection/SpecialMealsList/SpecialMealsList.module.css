@@ -1,0 +1,46 @@
+.list {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin: 3rem 0;
+  padding: 0 0rem;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-column-gap: 5rem;
+}
+
+.list .meal-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 0;
+}
+
+.list .meal-item h3 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin: 3.5rem 0 1.4rem;
+  color: #fbddbb;
+}
+
+.list .meal-item p {
+  font-size: 1.8rem;
+  color: #ffffffde;
+  font-weight: 400;
+  width: 80%;
+  text-align: center;
+}
+
+@media (max-width: 75em) {
+  .list .meal-item p {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=SpecialMealsList.module.css.map */

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACI,eADW,CACT,EAAE,CAAC;EACD,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,IAAI;CAOxB;;AAXL,AAMQ,eANO,CACT,EAAE,CAKE,EAAE,CAAC,CAAC,CAAC;EACH,OAAO,EAAE,KAAK;EACd,eAAe,EAAE,IAAI;EACrB,OAAO,EAAE,SAAS;CACrB;;AAIT,AAAA,YAAY,CAAC;EACT,gBAAgB,EAAE,IAAI;EACtB,aAAa,EAAE,GAAG,CAAC,KAAK,CClBZ,OAAO;CDmBtB",
+    "sources": [
+        "DashboardSubNavigation.module.scss",
+        "../../scss/_base.scss"
+    ],
+    "names": [],
+    "file": "DashboardSubNavigation.module.css"
+}

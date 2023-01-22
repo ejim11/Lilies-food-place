@@ -1,0 +1,30 @@
+.sign-up-img {
+  background: url("../../assets/sign-up-img.jpg"), rgba(226, 184, 135, 0.9);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sign-up-switch-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 3rem 5rem 0 0;
+  padding: 1rem 3rem;
+  border: 1px solid #00302e;
+  background-color: #00302e;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 34.375em) {
+  .sign-up-switch-btn {
+    margin: 3rem 2.5rem 0 0;
+  }
+}
+
+.sign-up-switch-btn:hover {
+  color: #00302e;
+  background-color: transparent;
+}
+/*# sourceMappingURL=SignUpComp.module.css.map */

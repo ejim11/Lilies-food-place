@@ -1,0 +1,181 @@
+.form-container {
+  width: 100%;
+  padding: 0 5rem;
+  margin: auto 0;
+}
+
+@media (max-width: 34.375em) {
+  .form-container {
+    padding: 0 2.5rem;
+  }
+}
+
+.form-container h3 {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 600;
+  margin: 0 0 6.1rem;
+  color: #00302e;
+}
+
+@media (orientation: landscape) and (max-height: 24.375em) {
+  .form-container h3 {
+    margin: 1rem 0 2.1rem;
+  }
+}
+
+.form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-container form input {
+  padding: 1.9rem 2.5rem;
+  background: rgba(255, 255, 255, 0.83);
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  caret-color: #00302e;
+  color: #00302e;
+}
+
+.form-container form input::-webkit-input-placeholder {
+  color: #00302e87;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.form-container form input:-ms-input-placeholder {
+  color: #00302e87;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.form-container form input::-ms-input-placeholder {
+  color: #00302e87;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.form-container form input::placeholder {
+  color: #00302e87;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.form-container form .valid .input {
+  border: 1px solid rgba(251, 221, 187, 0.51);
+}
+
+.form-container form .valid .input:focus {
+  border-color: #00302e;
+}
+
+.form-container form .invalid input {
+  border: 1px solid red;
+}
+
+.form-container form .password-div {
+  position: relative;
+}
+
+.form-container form .password-div .show-password {
+  position: absolute;
+  top: 1.9rem;
+  right: 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #00302e;
+  cursor: pointer;
+}
+
+.form-container form .middle-div {
+  margin: 4.8rem 0;
+}
+
+@media (orientation: landscape) and (max-height: 24.375em) {
+  .form-container form .middle-div {
+    margin: 2.8rem 0;
+  }
+}
+
+.form-container form .form-btn {
+  background-color: #00302e;
+  border: 1px solid #00302e;
+  padding: 1rem 3rem;
+  color: #fbddbb;
+  font-size: 1.8rem;
+}
+
+.form-container form .form-btn:disabled, .form-container form .form-btn:disabled:hover, .form-container form .form-btn:disabled:active {
+  background-color: #ccc;
+  color: #fff;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  font-size: 1.2rem;
+  margin: 1rem 0 0;
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.page-changer {
+  color: #fff;
+  background-color: #00302e;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  border: 1px solid #00302e;
+}
+
+.page-changer:hover {
+  color: #00302e;
+  background-color: transparent;
+}
+
+.page-change-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem 0 0;
+}
+
+@media (max-width: 34.375em) {
+  .page-change-box {
+    margin: 6rem 0 0;
+  }
+}
+
+.next-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.next-box .next {
+  margin: 4rem 0 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+@media (max-width: 34.375em) {
+  .next-box .next {
+    margin: 6rem 0 0;
+  }
+}
+/*# sourceMappingURL=SignUpForm.module.css.map */

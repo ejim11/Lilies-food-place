@@ -1,0 +1,129 @@
+.first-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 46.875em) {
+  .first-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.first-section-box-1 {
+  width: 60%;
+}
+
+@media (max-width: 75em) {
+  .first-section-box-1 {
+    width: 65%;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .first-section-box-1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.first-section-box-1 h1 {
+  font-size: 6rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+@media (max-width: 75em) {
+  .first-section-box-1 h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 59.375em) {
+  .first-section-box-1 h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 34.375em) {
+  .first-section-box-1 h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.first-section-box-1 h1 span {
+  color: #fbddbb;
+}
+
+.first-section-box-1 p {
+  font-size: 1.8rem;
+  color: #ffffffde;
+  padding-right: 10rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 59.375em) {
+  .first-section-box-1 p {
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .first-section-box-1 p {
+    padding-right: 0rem;
+  }
+}
+
+.first-section-box-2 {
+  width: 40%;
+}
+
+@media (max-width: 75em) {
+  .first-section-box-2 {
+    width: 35%;
+  }
+}
+
+@media (max-width: 46.875em) {
+  .first-section-box-2 {
+    width: 50%;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 34.375em) {
+  .first-section-box-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80%;
+  }
+}
+
+.first-section-box-2 img {
+  margin-left: 3rem;
+}
+
+@media (max-width: 75em) {
+  .first-section-box-2 img {
+    margin-left: 0;
+  }
+}
+
+.g-play a {
+  margin-right: 1.2rem;
+}
+/*# sourceMappingURL=FirstSection.module.css.map */

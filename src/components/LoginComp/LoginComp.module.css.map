@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,UAAU,EAAE,iCAAiC,EAAE,wBAAwB;EACvE,qBAAqB,EAAE,QAAQ;EAC/B,eAAe,EAAE,KAAK;EACtB,iBAAiB,EAAE,SAAS;EAC5B,mBAAmB,EAAE,MAAM;CAC5B",
+    "sources": [
+        "LoginComp.module.scss"
+    ],
+    "names": [],
+    "file": "LoginComp.module.css"
+}

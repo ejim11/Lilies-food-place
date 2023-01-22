@@ -1,0 +1,46 @@
+.table-box {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: auto;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.table-box::-webkit-scrollbar {
+  width: 3px;
+}
+
+.table-box::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.table-box::-webkit-scrollbar-thumb {
+  background: rgba(0, 48, 46, 0.1);
+}
+
+.table-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.table-box table {
+  width: 100%;
+  color: #00302e;
+  border-collapse: separate;
+  border-spacing: 1rem 1rem;
+  border-color: transparent;
+}
+
+.table-box table th {
+  text-align: left;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.table-box table th:not(.th-0) {
+  text-align: center;
+  padding: 1rem;
+}
+/*# sourceMappingURL=Table.module.css.map */

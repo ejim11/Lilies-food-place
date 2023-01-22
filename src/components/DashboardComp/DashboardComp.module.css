@@ -1,0 +1,23 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.83);
+  overflow: hidden;
+}
+
+@media (max-width: 46.875em) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: auto;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+}
+/*# sourceMappingURL=DashboardComp.module.css.map */

@@ -3,7 +3,7 @@ import useInput from "../../hooks/user-input";
 import Button from "../../UI/Button/Button";
 import classes from "./Checkout.module.scss";
 import { useDispatch } from "react-redux";
-import { cartActions } from "../../store/cartSlice";
+import { cartActions } from "../../../store/cartSlice";
 import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
