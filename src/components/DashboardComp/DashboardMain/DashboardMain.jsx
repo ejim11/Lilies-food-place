@@ -1,16 +1,9 @@
 import { Outlet } from "react-router-dom";
 import classes from "./DashboardMain.module.scss";
-import { useSelector } from "react-redux";
 import DashboardSubNavigation from "../DashboardSubNavigation/DashboardSubNavigation";
-import Cart from "../Cart/Cart";
-import Order from "../Order/Order";
-import AddToCart from "../AddToCart/AddToCart";
 
 const DashboardMain = () => {
   const time = new Date().getHours();
-  const cartLinkState = useSelector((state) => state.cart.cartLink);
-
-  const addToCartId = useSelector((state) => state.cart.addToCartId);
 
   let nameSign;
   let displayName;
@@ -51,9 +44,6 @@ const DashboardMain = () => {
       </div>
       <DashboardSubNavigation />
       <Outlet />
-      {cartLinkState === "cart" && <Cart />}
-      {cartLinkState === "order" && <Order />}
-      {addToCartId && <AddToCart />}
     </div>
   );
 };
