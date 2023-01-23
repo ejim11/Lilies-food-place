@@ -11,7 +11,10 @@ const MealItem = ({ meal }) => {
   return (
     <li className={classes["meal-item"]}>
       <div className={classes["meal-img"]}>
-        <img src={meal.meal_avatar} alt={meal.meal_name} />
+        <img
+          src={`https://lilliesfoodpalace.kazcodez.dev/${meal.meal_avatar}`}
+          alt={meal.meal_name}
+        />
       </div>
       <h3>{meal.meal_name}</h3>
       <p className={classes["meal-text"]}>{meal.meal_details}</p>
