@@ -8,7 +8,9 @@ const Modal = (props) => {
   const dispatchFn = useDispatch();
 
   const closeModalHandler = (e) => {
-    dispatchFn(cartActions.changeCartLink(""));
+    if (e.target.dataset.close) {
+      dispatchFn(cartActions.changeCartLink(""));
+    }
   };
 
   return (
@@ -19,7 +21,7 @@ const Modal = (props) => {
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 500, opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeIn" }}
-        data-mark={"blank"}
+        data-close={"close"}
         className={`${classes["modal-box"]} ${props.boxClassName}`}
         onClick={closeModalHandler}
       >
@@ -27,7 +29,9 @@ const Modal = (props) => {
           <Button
             type="button"
             className={classes["back-btn"]}
-            onClick={closeModalHandler}
+            onClick={() => {
+              dispatchFn(cartActions.changeCartLink(""));
+            }}
           >
             Back
           </Button>
