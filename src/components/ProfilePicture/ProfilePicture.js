@@ -9,7 +9,7 @@ const ProfilePicture = (props) => {
     console.log(e.target.files);
     const url = URL.createObjectURL(e.target.files[0]);
     setFile(url);
-    props.onAddImgUrl(url);
+    props.onAddImgUrl(e.target.files[0]);
   }
 
   return (
