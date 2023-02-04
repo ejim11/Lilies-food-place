@@ -1,6 +1,5 @@
 import { useEffect, useCallback } from "react";
 import { client } from "../../../axiosconfig";
-import classes from "./AllMeals.module.scss";
 import { cartActions } from "../../../store/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import GridBox from "../../UI/GridBoxAndItem/GridBox";
@@ -18,8 +17,6 @@ const AllMeals = () => {
       const res = await client.get("api/all_meals");
 
       dispatchFn(cartActions.addAllMeals(res.data));
-
-      console.log(res.data);
     } catch (err) {
       console.log(err.message);
     }
@@ -29,11 +26,13 @@ const AllMeals = () => {
     getAllMeals();
   }, [getAllMeals]);
 
+  console.log(allMealsList);
+
   const mealsList = allMealsList.map((meal, i) => (
     <MealItem key={i} meal={meal} />
   ));
 
-  return <GridBox className={classes["list-container"]}>{mealsList}</GridBox>;
+  return <GridBox>{mealsList}</GridBox>;
 };
 
 export default AllMeals;
