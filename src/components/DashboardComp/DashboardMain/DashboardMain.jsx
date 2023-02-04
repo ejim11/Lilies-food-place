@@ -1,8 +1,16 @@
 import { Outlet } from "react-router-dom";
 import classes from "./DashboardMain.module.scss";
 import DashboardSubNavigation from "../DashboardSubNavigation/DashboardSubNavigation";
+import { useSelector } from "react-redux";
 
 const DashboardMain = () => {
+  const userTypeState = useSelector((state) => state.auth.userType);
+
+  const userImg = localStorage.getItem("profileImage");
+  console.log(userImg);
+
+  const companyName = localStorage.getItem("companyName");
+
   const time = new Date().getHours();
 
   let nameSign;
@@ -20,8 +28,6 @@ const DashboardMain = () => {
     nameSign = name.slice(0, 1).toUpperCase() + name.slice(-1).toUpperCase();
   }
 
-  console.log(displayName, nameSign);
-
   const setGreeting = () => {
     const greeting =
       time < 12 ? "morning" : time < 16 ? "afternoon" : "evening";
@@ -34,13 +40,22 @@ const DashboardMain = () => {
       <div className={classes["intro-box"]}>
         <div className={classes["greeting-box"]}>
           <p className={classes.greeting}>
-            Good {setGreeting()}, {displayName}!
+            Good {setGreeting()},{" "}
+            {userTypeState === "vendor" ? companyName : displayName}
           </p>
           <p className={classes["greeting-question"]}>
-            What delicious meal are you craving today?
+            {userTypeState === "vendor"
+              ? "What delicious meal are you preparing today?"
+              : "What delicious meal are you craving today?"}
           </p>
         </div>
-        <div className={classes["name-sign"]}>{nameSign}</div>
+        {userImg ? (
+          <div className={classes["user-img"]}>
+            <img src={userImg} alt="img" />
+          </div>
+        ) : (
+          <div className={classes["name-sign"]}>{nameSign}</div>
+        )}
       </div>
       <DashboardSubNavigation />
       <Outlet />
