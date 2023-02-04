@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState, useEffect, useCallback } from "react";
 import { client } from "../../../axiosconfig";
@@ -9,6 +9,8 @@ import classes from "./VendorDetailsComp.module.scss";
 const VendorDetailsComp = () => {
   const params = useParams();
 
+  const navigate = useNavigate();
+
   const [vendorMeals, setVendorMeals] = useState([]);
 
   const vendorsList = useSelector((state) => state.vendorsList.list);
@@ -18,6 +20,8 @@ const VendorDetailsComp = () => {
   const [vendor] = vendorsList.filter(
     (vendor) => vendor.unique_id === params.vendorId
   );
+
+  console.log(vendor);
 
   const getVendorMeals = useCallback(async () => {
     const res = await client.get(`api/vendor_meal/${params.vendorId}`, {
@@ -35,19 +39,28 @@ const VendorDetailsComp = () => {
 
   return (
     <div className={classes["container"]}>
+      <button
+        className={classes.btn}
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Back
+      </button>
       <div className={classes["details"]}>
         <img src={vendor.vendor_avatar} alt={vendor.company_name} />
-        <div>
+        <div className={classes["vendor-details"]}>
           <h2>{vendor.company_name}</h2>
+          <p>{vendor.address}</p>
           <p>{vendor.email}</p>
           <p>{vendor.phone}</p>
         </div>
       </div>
-      <GridBox>
+      <div className={classes["vendor-meal-list"]}>
         {vendorMeals.map((meal, i) => (
           <MealItem key={i} meal={meal} />
         ))}
-      </GridBox>
+      </div>
     </div>
   );
 };
