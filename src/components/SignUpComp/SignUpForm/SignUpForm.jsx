@@ -165,6 +165,8 @@ const VendorForm = ({ vendorState }) => {
   const vendorSignUpFormHandler = async (e) => {
     e.preventDefault();
 
+    console.log(imgUrl);
+
     // create form data
     let formdata = new FormData();
     formdata.append("name", enteredName);
