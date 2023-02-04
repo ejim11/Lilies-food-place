@@ -65,7 +65,7 @@ export const loginHandler = (data, resetInputs) => {
 
       console.log(res);
 
-      // console.log(res2);
+      console.log(res2);
       // save name in local storage to retrieve and get the name logo
       localStorage.setItem("userName", res2.data.name);
 
@@ -77,7 +77,8 @@ export const loginHandler = (data, resetInputs) => {
         authActions.loginHandler({
           token: res.data.token,
           expirationTime: expirationTime.toISOString(),
-          user: res2.data.type,
+          userType: res2.data.type,
+          userData: res2.data,
         })
       );
 
@@ -100,7 +101,7 @@ export const loginHandler = (data, resetInputs) => {
 
 export const userLogout = (data) => {
   return (dispatch) => {
-    // dispatch(authActions.logoutBoxHandler({ logoutTimer }));
+    dispatch(authActions.logoutHandler({ logoutTimer }));
   };
 };
 

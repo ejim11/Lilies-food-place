@@ -19,15 +19,30 @@ const authSlice = createSlice({
     token: storedToken || "",
     remainingTime: storedDuration || 0,
     userType: storedUserType || "",
+    userData: {},
   },
   reducers: {
     // login handler
     loginHandler(state, action) {
-      state.token = action.payload.token;
-      state.isLoggedIn = !!action.payload.token;
-      localStorage.setItem("token", action.payload.token);
-      localStorage.setItem("expirationTime", action.payload.expirationTime);
-      localStorage.setItem("userType", action.payload.userType);
+      const { token, expirationTime, userType, userData } = action.payload;
+
+      state.token = token;
+      state.isLoggedIn = !!token;
+      state.userType = userType;
+      state.userData = userData;
+      localStorage.setItem("token", token);
+      localStorage.setItem("expirationTime", expirationTime);
+      localStorage.setItem("userType", userType);
+      localStorage.setItem(
+        "companyName",
+        `${userType === "vendor" ? userData.company_name : ""}`
+      );
+      localStorage.setItem(
+        "profileImage",
+        userData[
+          `${userData.type === "vendor" ? "vendor_avatar" : "user_avatar"}`
+        ]
+      );
 
       console.log("logged");
     },
