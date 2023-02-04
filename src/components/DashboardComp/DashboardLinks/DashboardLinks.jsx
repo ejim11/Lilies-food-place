@@ -11,15 +11,16 @@ import { cartActions } from "../../../store/cartSlice";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { HiX } from "react-icons/hi";
 import { useState } from "react";
+import { RiLogoutBoxLine } from "react-icons/ri";
 
 const DashboardLinks = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const mealCartState = useSelector((state) => state.cart.cart);
   const mealOrderState = useSelector((state) => state.cart.order);
+  const userTypeState = useSelector((state) => state.auth.userType);
   const [menuIsVisible, setMenuIsVisible] = useState(false);
   const locationActive = location.pathname.split("/").slice(-1)[0];
-  console.log(locationActive, location.pathname);
 
   const cartLink = useSelector((state) => state.cart.cartLink);
   const dispatchFn = useDispatch();
@@ -82,30 +83,38 @@ const DashboardLinks = () => {
                 Your Profile
               </NavLink>
             </li>
-            <li
-              className={`${classes["cart-link"]} ${
-                cartLink === "order" && classes["cart-link-active"]
-              }`}
-              onClick={() => {
-                dispatchFn(cartActions.changeCartLink("order"));
-              }}
-            >
-              <ImGift className={classes.icon} />
-              Orders{" "}
-              <span className={classes.order}>{mealOrderState.length}</span>
-            </li>
-            <li
-              className={`${classes["cart-link"]} ${
-                cartLink === "cart" && classes["cart-link-active"]
-              }`}
-              onClick={() => {
-                dispatchFn(cartActions.changeCartLink("cart"));
-              }}
-            >
-              <HiOutlineShoppingCart className={classes.icon} />
-              Your Cart
-              <span className={classes.cart}>{mealCartState.length}</span>
-            </li>
+            {userTypeState === "user" && (
+              <li
+                className={`${classes["cart-link"]} ${
+                  cartLink === "order" && classes["cart-link-active"]
+                }`}
+                onClick={() => {
+                  dispatchFn(cartActions.changeCartLink("order"));
+                }}
+              >
+                <ImGift className={classes.icon} />
+                Orders{" "}
+                <span className={classes.order}>{mealOrderState.length}</span>
+              </li>
+            )}
+            {userTypeState === "user" && (
+              <li
+                className={`${classes["cart-link"]} ${
+                  cartLink === "cart" && classes["cart-link-active"]
+                }`}
+                onClick={() => {
+                  dispatchFn(cartActions.changeCartLink("cart"));
+                }}
+              >
+                <HiOutlineShoppingCart className={classes.icon} />
+                Your Cart
+                <span className={classes.cart}>{mealCartState.length}</span>
+              </li>
+            )}
+
+            <button className={classes["logout-btn"]}>
+              <RiLogoutBoxLine className={classes["logout-icon"]} /> Logout
+            </button>
           </ul>
           <HiX className={classes["times-icon"]} />
         </div>

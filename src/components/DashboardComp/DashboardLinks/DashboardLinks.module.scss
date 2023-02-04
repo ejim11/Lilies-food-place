@@ -5,6 +5,7 @@
     border-radius: 0 2rem 2rem 0;
     width: 20%;
     background-color: #FBFBFB;
+    z-index: 50;
 
     @include respond(miniLaptop) {
         width: 28%;
@@ -32,6 +33,9 @@
     & .links {
         padding: 0rem 4rem;
         width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
 
         @include respond(tablet) {
             padding: 0rem 2.5rem;
@@ -86,7 +90,12 @@
 
 
         & .links-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
             @include respond(midTablet) {
+                flex-direction: row;
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -111,12 +120,16 @@
 
             & ul {
                 list-style-type: none;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
 
                 @include respond(midTablet) {
                     width: 70%;
                     padding: 7rem 1.5rem 0;
                     height: 100vh;
                     background-color: #FBFBFB;
+                    flex: .8;
                 }
 
                 & li {
@@ -245,4 +258,34 @@
     background: #EFEFEF;
     border-radius: 1.2rem;
 
+}
+
+.logout-btn {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: 1.4rem;
+    border: 1px solid $color-primary;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .3s ease;
+    align-items: center;
+
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-primary;
+    }
+
+
+    & .logout-icon {
+        height: 2.3rem;
+        width: 2.3rem;
+        color: currentColor;
+        margin-right: 1.5rem;
+    }
 }
