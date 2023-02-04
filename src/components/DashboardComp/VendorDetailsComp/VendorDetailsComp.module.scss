@@ -1,13 +1,85 @@
+@import "../../scss/base";
+@import "../../scss/mixin";
+
 .container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     overflow-y: scroll;
+    padding: 0 0 1.5rem;
+
+    & .btn {
+        padding: 1rem 2rem;
+        background-color: $color-primary;
+        color: $color-white;
+        font-size: 1.4rem;
+        border: 1px solid $color-primary;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all .3s ease;
+        align-self: flex-start;
+        margin-bottom: 1.5rem;
+
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-primary;
+        }
+    }
 
     & .details {
         margin: 1rem 0;
+        display: flex;
+
+        & img {
+            width: 30rem;
+            height: 20rem;
+        }
+
+        & .vendor-details {
+            margin-left: 2rem;
+
+
+            & h2 {
+                font-size: 3rem;
+                color: $color-primary;
+                margin-bottom: 1rem;
+            }
+
+            & p {
+                font-size: 1.4rem;
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    & .vendor-meal-list {
+        display: grid;
+        grid-template-columns: repeat(3, 25rem);
+        grid-template-rows: max-content;
+        grid-auto-rows: max-content;
+        grid-row-gap: 4rem;
+        justify-content: space-between;
+        padding: 2rem 2rem 4rem 0rem;
     }
 
     &::-webkit-scrollbar {
-        width: 0px;
+        width: 3px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $color-white
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgba($color-primary, .1);
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
 }
