@@ -125,11 +125,14 @@
                 flex-direction: column;
 
                 @include respond(midTablet) {
-                    width: 70%;
                     padding: 7rem 1.5rem 0;
                     height: 100vh;
                     background-color: #FBFBFB;
-                    flex: .8;
+                    flex: .5;
+                }
+
+                @include respond(phone) {
+                    flex: .7;
                 }
 
                 & li {
@@ -178,10 +181,6 @@
             //opacity: 1;
             @include respond(midTablet) {
                 transform: translate(0);
-                -webkit-transform: translate(0);
-                -moz-transform: translate(0);
-                -ms-transform: translate(0);
-                -o-transform: translate(0);
             }
         }
 
