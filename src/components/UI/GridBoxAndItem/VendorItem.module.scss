@@ -18,12 +18,11 @@
         height: 15rem;
 
         & img {
-            width: 25rem;
+            width: 100%;
             height: 15rem;
             object-fit: cover;
             transition: all .3s ease;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
+
 
             &:hover {
                 transform: scale(1.3);
