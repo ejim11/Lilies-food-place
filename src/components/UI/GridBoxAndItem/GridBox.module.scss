@@ -5,28 +5,33 @@
     flex: 1;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(3, 25rem);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
     grid-template-rows: max-content;
     grid-auto-rows: max-content;
     grid-row-gap: 4rem;
     justify-content: space-between;
     padding: 2rem 2rem 4rem 0rem;
 
-    @include respond(bigTablet) {
-        grid-row-gap: 3rem;
-        grid-column-gap: 4rem;
+    @include respond(miniLaptop) {
+        grid-row-gap: 2.5rem;
+        grid-column-gap: 2.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
     }
 
     @include respond(tablet) {
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    }
-
-    @include respond(midTablet) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 23rem));
         grid-row-gap: 1.5rem;
         grid-column-gap: 2rem;
     }
 
+    // @include respond(midTablet) {
+    //     grid-template-columns: repeat(auto-fit, minmax(20rem,23rem));
+    // }
+
+
+
     @include respond(phone) {
+        grid-template-columns: 1fr;
         grid-row-gap: 4rem;
         padding: 2rem 2rem 4rem;
         overflow-y: unset;
